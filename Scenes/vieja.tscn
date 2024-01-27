@@ -1,8 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://caq41wdo3qewc"]
+[gd_scene load_steps=14 format=3 uid="uid://caq41wdo3qewc"]
 
 [ext_resource type="Script" path="res://Scripts/Vieja.gd" id="1_t8qj0"]
 [ext_resource type="Texture2D" uid="uid://3fxyu3d8n00q" path="res://Textures/Vieja/vieja_spritesheet.png" id="2_37d4w"]
-[ext_resource type="Material" uid="uid://dsqqrh112ui38" path="res://Materials/viejaMaterial.tres" id="2_e2ht1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_80aap"]
 radius = 18.0
@@ -995,7 +994,6 @@ node_connections = [&"Idle_walk", 0, &"Animation", &"Idle_walk", 1, &"Animation 
 
 [node name="Node2D" type="CharacterBody2D"]
 script = ExtResource("1_t8qj0")
-myMaterial = ExtResource("2_e2ht1")
 
 [node name="Vieja_node" type="Node2D" parent="."]
 scale = Vector2(0.5, 0.5)

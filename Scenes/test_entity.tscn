@@ -1,12 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://b2foabe11hyef"]
+[gd_scene load_steps=3 format=3 uid="uid://b2foabe11hyef"]
 
 [ext_resource type="Script" path="res://Scripts/TestEntity.gd" id="1_2tl35"]
-[ext_resource type="Material" uid="uid://2fachlqmallx" path="res://Materials/testEntityMaterial.tres" id="2_3oh8t"]
-[ext_resource type="Texture2D" uid="uid://datmyfxnl78s3" path="res://Textures/icon.svg" id="3_rnv7r"]
+[ext_resource type="Texture2D" uid="uid://cx42ggegrghou" path="res://Textures/Vieja/V_foot.tres" id="3_mwt8n"]
 
-[node name="TestEntity" type="Node2D"]
+[node name="TestEntity" type="Node2D" node_paths=PackedStringArray("sprites")]
 script = ExtResource("1_2tl35")
-myMaterial = ExtResource("2_3oh8t")
+materialPath = "res://Materials/testEntityMaterial.tres"
+sprites = [NodePath("Sprite2D")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("3_rnv7r")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_mwt8n")
