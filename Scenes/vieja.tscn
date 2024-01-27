@@ -1,17 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://caq41wdo3qewc"]
+[gd_scene load_steps=9 format=3 uid="uid://caq41wdo3qewc"]
 
 [ext_resource type="Script" path="res://Scripts/Vieja.gd" id="1_t8qj0"]
 [ext_resource type="Texture2D" uid="uid://3fxyu3d8n00q" path="res://Textures/Vieja/vieja_spritesheet.png" id="2_37d4w"]
-[ext_resource type="Texture2D" uid="uid://ms7owxwl2lvh" path="res://Textures/Vieja/V_top.tres" id="2_vahrh"]
-[ext_resource type="Texture2D" uid="uid://chwdtgka2uxp4" path="res://Textures/Vieja/V_bottom.tres" id="3_8eihx"]
-[ext_resource type="Texture2D" uid="uid://cx42ggegrghou" path="res://Textures/Vieja/V_foot.tres" id="4_cmt2a"]
-[ext_resource type="Texture2D" uid="uid://cl8eqcu3ibci8" path="res://Textures/Vieja/V_handL.tres" id="5_js5ol"]
-[ext_resource type="Texture2D" uid="uid://bxdt8305415ff" path="res://Textures/Vieja/V_handR.tres" id="6_m26qh"]
-[ext_resource type="Texture2D" uid="uid://cpq7a0edl7txp" path="res://Textures/Vieja/V_head.tres" id="7_i2ik6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_80aap"]
-radius = 44.0
-height = 184.0
+radius = 18.0
+height = 84.0
 
 [sub_resource type="Animation" id="Animation_l20ku"]
 length = 0.001
@@ -732,8 +726,8 @@ tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0),
-"points": PackedFloat32Array(-78.5965, -0.25, 0, 0.25, 0, -93.0475, -0.25, 0, 0.190649, 0.378235, -72.3702, -0.116801, -1.38686, 0.190351, -0.126076, -78.5965, -0.441187, -3.48171, 0.25, 0),
-"times": PackedFloat32Array(0, 0.375, 0.583333, 1)
+"points": PackedFloat32Array(-78.5965, -0.25, 0, 0.25, 0, -93.0475, -0.25, 0, 0.190649, 0.378235, -73.9904, -0.125, -0.247231, 0.137661, -0.152557, -78.5965, -0.364881, -3.86074, 0.25, 0),
+"times": PackedFloat32Array(0, 0.375, 0.625, 1)
 }
 tracks/16/type = "bezier"
 tracks/16/imported = false
@@ -742,9 +736,9 @@ tracks/16/path = NodePath("Vieja_node/VBottom/VTop/VHead:rotation")
 tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.240154, -0.114584, -0.00283192, 0.21875, -0.00283192, -0.145789, -0.175106, 0.010112, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.333333, 0.541667, 1)
+"handle_modes": PackedInt32Array(0, 2, 2, 2),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.244647, -0.111111, 0, 0.0694447, 0, -0.141296, -0.0694447, 0, 0.152778, 0, 0, -0.152778, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.395833, 0.604167, 1)
 }
 tracks/17/type = "bezier"
 tracks/17/imported = false
@@ -792,7 +786,7 @@ tracks/20/keys = {
 }
 tracks/21/type = "value"
 tracks/21/imported = false
-tracks/21/enabled = true
+tracks/21/enabled = false
 tracks/21/path = NodePath("Vieja_node/VBottom/VTop/VHead:frame")
 tracks/21/interp = 1
 tracks/21/loop_wrap = true
@@ -812,6 +806,7 @@ _data = {
 script = ExtResource("1_t8qj0")
 
 [node name="Vieja_node" type="Node2D" parent="."]
+scale = Vector2(0.5, 0.5)
 
 [node name="VBottom" type="Sprite2D" parent="Vieja_node"]
 position = Vector2(7, -81)
@@ -877,57 +872,8 @@ hframes = 4
 vframes = 4
 frame = 4
 
-[node name="Vieja_node2" type="Node2D" parent="."]
-visible = false
-
-[node name="VBottom" type="Sprite2D" parent="Vieja_node2"]
-position = Vector2(7, -81.0287)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_8eihx")
-offset = Vector2(-2, 42)
-
-[node name="VTop" type="Sprite2D" parent="Vieja_node2/VBottom"]
-z_index = -1
-position = Vector2(-8, -20.0008)
-texture = ExtResource("2_vahrh")
-offset = Vector2(-12, -44)
-
-[node name="VHead" type="Sprite2D" parent="Vieja_node2/VBottom/VTop"]
-z_index = 1
-position = Vector2(-66, -90.0012)
-rotation = 1.9828e-05
-texture = ExtResource("7_i2ik6")
-offset = Vector2(-58, -48)
-
-[node name="VHandL" type="Sprite2D" parent="Vieja_node2/VBottom/VTop"]
-z_index = 2
-position = Vector2(-40, 0)
-texture = ExtResource("5_js5ol")
-offset = Vector2(-12, 32)
-
-[node name="VFootR" type="Sprite2D" parent="Vieja_node2"]
-z_index = -1
-position = Vector2(-23.9937, -12)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_cmt2a")
-offset = Vector2(-24, -8)
-
-[node name="VFootL" type="Sprite2D" parent="Vieja_node2"]
-position = Vector2(41.995, -26.8933)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_cmt2a")
-offset = Vector2(-26, -8)
-
-[node name="VHandR" type="Sprite2D" parent="Vieja_node2"]
-z_index = -1
-position = Vector2(-80.9947, -89.9999)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_m26qh")
-offset = Vector2(-20, 78)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(0, -93)
+position = Vector2(-1, -44)
 shape = SubResource("CapsuleShape2D_80aap")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
