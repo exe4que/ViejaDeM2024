@@ -1,7 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://caq41wdo3qewc"]
+[gd_scene load_steps=24 format=3 uid="uid://caq41wdo3qewc"]
 
 [ext_resource type="Script" path="res://Scripts/Vieja.gd" id="1_t8qj0"]
 [ext_resource type="Texture2D" uid="uid://3fxyu3d8n00q" path="res://Textures/Vieja/vieja_spritesheet.png" id="2_37d4w"]
+[ext_resource type="Material" uid="uid://dsqqrh112ui38" path="res://Materials/viejaMaterial.tres" id="2_e2ht1"]
+[ext_resource type="Texture2D" uid="uid://bp6gggoe3mksr" path="res://Textures/Boy/pibe_spritesheet.png" id="4_yuuu6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_80aap"]
 radius = 18.0
@@ -17,7 +19,7 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(42, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(38, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/1/type = "bezier"
@@ -28,7 +30,7 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-10, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-14, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/2/type = "bezier"
@@ -50,7 +52,7 @@ tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-5, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-24, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/4/type = "bezier"
@@ -83,7 +85,7 @@ tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-92, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-81, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/7/type = "bezier"
@@ -94,7 +96,7 @@ tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-89, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-101.558, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/8/type = "bezier"
@@ -116,7 +118,7 @@ tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-40, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(5.86813, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/10/type = "bezier"
@@ -127,7 +129,7 @@ tracks/10/interp = 1
 tracks/10/loop_wrap = true
 tracks/10/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-17.2664, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/11/type = "bezier"
@@ -149,7 +151,7 @@ tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-66, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-61.3988, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/13/type = "bezier"
@@ -160,7 +162,7 @@ tracks/13/interp = 1
 tracks/13/loop_wrap = true
 tracks/13/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-90, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-71.5641, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/14/type = "bezier"
@@ -193,7 +195,7 @@ tracks/16/interp = 1
 tracks/16/loop_wrap = true
 tracks/16/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-20, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-13.8405, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/17/type = "bezier"
@@ -239,6 +241,75 @@ tracks/20/keys = {
 "handle_modes": PackedInt32Array(0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
+}
+tracks/21/type = "bezier"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Vieja_node/VHandR/VBall:position:x")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/22/type = "bezier"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Vieja_node/VHandR/VBall:position:y")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/23/type = "bezier"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Vieja_node/VHandR/VBall:rotation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Vieja_node/VHandR/VBall:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Vieja_node/VHandR:frame")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Vieja_node/VBottom/VTop/VHandL:frame")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
 }
 
 [sub_resource type="Animation" id="Animation_ycsd7"]
@@ -483,6 +554,324 @@ _data = {
 "Walk_cycle": SubResource("Animation_ycsd7")
 }
 
+[sub_resource type="Animation" id="Animation_jcfog"]
+resource_name = "Attack_Ball"
+length = 2.5
+loop_mode = 1
+step = 0.0416667
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vieja_node/VBottom:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(7, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 4.8584, -0.25, 0, 0.25, 0, 7, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.416666, 0.999998, 1.125, 1.903, 2.3125)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Vieja_node/VBottom:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-81, -0.25, 0, 0.25, 0, -80, -0.25, 0, 0.25, 0, -80, -0.25, 0, 0.25, 0, -80, -0.25, 0, 0.25, 0, -80.1501, -0.25, 0, 0.25, 0, -80.6856, -0.25, 0, 0.25, 0, -81, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.416666, 0.999998, 1.125, 1.29166, 1.903, 2.3125)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Vieja_node/VBottom:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.261799, -0.25, 0, 0.25, 0, -0.171577, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.416666, 1.125, 2.3125)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Vieja_node/VBottom/VTop:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(-8, -0.25, 0, 0.25, 0, -8.79653, -0.25, 0, 0.25, 0, -8.67699, -0.25, 0, 0.25, 0, -8, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.416666, 1.29166, 2.3125)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Vieja_node/VBottom/VTop:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(-13.8405, -0.25, 0, 0.25, 0, -5.80794, -0.25, 0, 0.25, 0, -5.80794, -0.25, 0, 0.25, 0, -13.8405, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.416666, 0.999998, 2.3125)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Vieja_node/VBottom/VTop:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.261799, -0.25, 0, 0.25, 0, -0.261799, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.416666, 0.999998, 2.3125)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Vieja_node/VBottom/VTop/VHead:position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-61.3988, -0.25, 0, 0.25, 0, -61.3988, -0.25, 0, 0.25, 0, -61.3988, -0.25, 0, 0.25, 0, -61.3988, -0.25, 0, 0.25, 0, -61.3988, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.999998, 1.125, 1.29166, 2.3125)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Vieja_node/VBottom/VTop/VHead:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-71.5641, -0.25, 0, 0.25, 0, -71.5641, -0.25, 0, 0.25, 0, -71.5641, -0.25, 0, 0.25, 0, -71.5641, -0.25, 0, 0.25, 0, -71.5641, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.999998, 1.125, 1.29166, 2.3125)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Vieja_node/VBottom/VTop/VHead:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.999998, 1.125, 1.29166, 2.3125)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Vieja_node/VBottom/VTop/VHandL:position:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(5.86813, -0.25, 0, 0.25, 0, 6.22008, -0.25, 0, 0.25, 0, 103.269, -0.0972221, 0, 0.048611, 0, 103.269, -0.25, 0, 0.25, 0, -98.5024, -0.048611, 0, 0.333335, -8.12005, 51.2233, -0.0833333, -1.94872, 0.25, 0, 5.86813, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.416666, 0.999998, 1.125, 1.29166, 1.83333, 2.3125)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Vieja_node/VBottom/VTop/VHandL:position:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-17.2664, -0.25, 0, 0.25, 0, 21.1324, -0.0972221, 0, 0.048611, 0, 21.1324, -0.25, 0, 0.25, 0, -37.5512, -0.048611, 0, 0.118056, 0, -1.39199, -0.25, 0, 0.25, 0, -17.2664, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.999998, 1.125, 1.29166, 1.83333, 2.3125)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Vieja_node/VBottom/VTop/VHandL:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, -0.523598, -0.25, 0, 0.25, 0, -0.523598, -0.25, 0, 0.044396, 0.00638109, -0.523598, -0.25, 0, 0.25, 0, -0.150666, -0.109608, -0.016869, 0.115096, 0.0174548, -0.435761, -0.0547073, 0, 0.0633487, 0, 0, -0.103229, -0.016846, 0.25, 0),
+"times": PackedFloat32Array(0, 0.416666, 0.999998, 1.125, 1.29166, 1.75, 2.3125)
+}
+tracks/12/type = "bezier"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Vieja_node/VFootR:position:x")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-24, -0.25, 0, 0.25, 0, -24, -0.25, 0, 0.25, 0, -24, -0.25, 0, 0.25, 0, -24, -0.25, 0, 0.25, 0, -24, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.999998, 1.125, 1.29166, 2.3125)
+}
+tracks/13/type = "bezier"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Vieja_node/VFootR:position:y")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-12, -0.25, 0, 0.25, 0, -12, -0.25, 0, 0.25, 0, -12, -0.25, 0, 0.25, 0, -12, -0.25, 0, 0.25, 0, -12, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.999998, 1.125, 1.29166, 2.3125)
+}
+tracks/14/type = "bezier"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Vieja_node/VFootR:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.999998, 1.125, 1.29166, 2.3125)
+}
+tracks/15/type = "bezier"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Vieja_node/VFootL:position:x")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(38, -0.25, 0, 0.25, 0, 38, -0.25, 0, 0.25, 0, 38, -0.25, 0, 0.25, 0, 38, -0.25, 0, 0.25, 0, 38, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.999998, 1.125, 1.29166, 2.3125)
+}
+tracks/16/type = "bezier"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Vieja_node/VFootL:position:y")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-14, -0.25, 0, 0.25, 0, -14, -0.25, 0, 0.25, 0, -14, -0.25, 0, 0.25, 0, -14, -0.25, 0, 0.25, 0, -14, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.999998, 1.125, 1.29166, 2.3125)
+}
+tracks/17/type = "bezier"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Vieja_node/VFootL:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.999998, 1.125, 1.29166, 2.3125)
+}
+tracks/18/type = "bezier"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Vieja_node/VHandR:position:x")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-81, -0.25, 0, 0.25, 0, -60, -0.25, 0, 0.25, 0, -80, -0.25, 0, 0.25, 0, -79.676, -0.25, 0, 0.25, 0, -28, -0.25, 0, 0.25, 0, -81, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.416666, 0.999998, 1.5, 1.9375, 2.3125)
+}
+tracks/19/type = "bezier"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Vieja_node/VHandR:position:y")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-101.558, -0.25, 0, 0.25, 0, -86, -0.25, 0, 0.25, 0, -44.7977, -0.25, 0, 0.333335, -0.285858, -73.005, -0.375, 0.318626, 0.25, 0, -176, -0.25, 0, 0.25, 0, -101.558, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.416666, 0.874998, 1.5, 1.9375, 2.3125)
+}
+tracks/20/type = "bezier"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Vieja_node/VHandR:rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.523598, -0.25, 0, 0.25, 0, 0.523598, -0.25, 0, 0.25, 0, 0.523598, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.416666, 0.999998, 1.125, 2.3125)
+}
+tracks/21/type = "bezier"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Vieja_node/VHandR/VBall:position:x")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-48.3333, -0.25, 0, 0.25, 0, -72.4958, -0.25, 0, 0.25, 0, -72.4958, -0.25, 0, 0.25, 0, -68.8696, -0.25, 0, 0.25, 0, -52.0286, -0.25, 0, 0.25, 0, -48.3333, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.999998, 1.125, 1.29166, 1.9375, 2.3125)
+}
+tracks/22/type = "bezier"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Vieja_node/VHandR/VBall:position:y")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(79.2633, -0.25, 0, 0.25, 0, 61.1004, -0.25, 0, 0.25, 0, 61.1004, -0.25, 0, 0.25, 0, 63.8261, -0.25, 0, 0.25, 0, 58.2455, -0.25, 0, 0.25, 0, 79.2633, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.999998, 1.125, 1.29166, 1.9375, 2.3125)
+}
+tracks/23/type = "bezier"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Vieja_node/VHandR/VBall:rotation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1.125, 1.29166, 2.3125)
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Vieja_node/VHandR/VBall:visible")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 0.999998, 1.9375),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Vieja_node/VHandR:frame")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0, 0.666665, 2.0625, 2.25),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 12, 12, 4]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Vieja_node/VBottom/VTop/VHandL:frame")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0, 0.416666, 1.75),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [6, 10, 6]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Vieja_node/VHandR/VBall:frame")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0.916665, 1.375, 1.9375),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [9, 10, 10]
+}
+
 [sub_resource type="Animation" id="Animation_aoo6b"]
 resource_name = "Idle"
 loop_mode = 1
@@ -717,6 +1106,42 @@ tracks/20/keys = {
 "handle_modes": PackedInt32Array(1, 1),
 "points": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
 "times": PackedFloat32Array(0, 1)
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Vieja_node/VHandR/VBall:visible")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Vieja_node/VHandR:frame")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Vieja_node/VBottom/VTop/VHandL:frame")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
 }
 
 [sub_resource type="Animation" id="Animation_rh3oj"]
@@ -966,34 +1391,140 @@ tracks/21/keys = {
 "update": 1,
 "values": [0, 1, 2, 0, 0]
 }
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Vieja_node/VHandR/VBall:visible")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Vieja_node/VHandR:frame")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Vieja_node/VBottom/VTop/VHandL:frame")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+
+[sub_resource type="Animation" id="Animation_ujwt5"]
+resource_name = "Attack_Pibe"
+length = 1.0
+loop_mode = 1
+step = 0.0416667
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vieja_node/VHandR:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-81, 0, 0, 0, 0, -56, -0.125, 0, 0.0694444, 0, -26, -0.0694444, 0, 0.166667, 0, -81, 0, 0, 0, 0, -81, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.208333, 0.375, 0.791667, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Vieja_node/VHandR:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-101.558, 0, 0, 0, 0, -156, -0.25, 0, 0.25, 0, -104, -0.25, 0, 0.25, 0, -101.558, 0, 0, 0, 0, -101.558, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.208333, 0.375, 0.791667, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Vieja_node/VHandR:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, 2.61799, -0.125, 0, 0.0694444, 0, -0.785397, -0.0694444, 0, 0.0972222, 0, 0.261799, -0.0972169, -0.00280191, 0.208333, 0.00600442, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.208333, 0.375, 0.583333, 0.791667, 1)
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_56nsl"]
 _data = {
+"Attack_Ball": SubResource("Animation_jcfog"),
+"Attack_Pibe": SubResource("Animation_ujwt5"),
 "Idle": SubResource("Animation_aoo6b"),
 "Walk_cycle": SubResource("Animation_rh3oj")
 }
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2r310"]
-animation = &"Anim_Vieja/Walk_cycle"
+[sub_resource type="AnimationNodeAdd2" id="AnimationNodeAdd2_lp0hi"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hfa8e"]
+animation = &"Anim_Vieja/Attack_Pibe"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5cqeu"]
+animation = &"Anim_Vieja/Attack_Ball"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_y1m3l"]
+animation = &"Anim_Vieja/Idle"
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_82lgy"]
 animation = &"Anim_Vieja/Idle"
 
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_h8mer"]
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_2r310"]
+animation = &"Anim_Vieja/Walk_cycle"
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_wkqvu"]
+autorestart_delay = 0.0
+
+[sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_jl73q"]
+
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_q35j8"]
-graph_offset = Vector2(-442.611, -25.1519)
-nodes/Animation/node = SubResource("AnimationNodeAnimation_82lgy")
-nodes/Animation/position = Vector2(-140, 40)
-"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_2r310")
-"nodes/Animation 2/position" = Vector2(-140, 220)
-nodes/Idle_walk/node = SubResource("AnimationNodeBlend2_h8mer")
-nodes/Idle_walk/position = Vector2(340, 60)
-nodes/output/position = Vector2(800, 60)
-node_connections = [&"Idle_walk", 0, &"Animation", &"Idle_walk", 1, &"Animation 2", &"output", 0, &"Idle_walk"]
+graph_offset = Vector2(116.145, 234.938)
+nodes/Add2/node = SubResource("AnimationNodeAdd2_lp0hi")
+nodes/Add2/position = Vector2(1029, 630)
+nodes/Animation/node = SubResource("AnimationNodeAnimation_5cqeu")
+nodes/Animation/position = Vector2(252, 840)
+"nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_hfa8e")
+"nodes/Animation 2/position" = Vector2(693, 861)
+nodes/Idle/node = SubResource("AnimationNodeAnimation_82lgy")
+nodes/Idle/position = Vector2(252, 399)
+"nodes/Idle 2/node" = SubResource("AnimationNodeAnimation_y1m3l")
+"nodes/Idle 2/position" = Vector2(672, 672)
+nodes/Walk/node = SubResource("AnimationNodeBlend2_h8mer")
+nodes/Walk/position = Vector2(567, 399)
+nodes/Walk_Cycle/node = SubResource("AnimationNodeAnimation_2r310")
+nodes/Walk_Cycle/position = Vector2(252, 630)
+nodes/attack_ball/node = SubResource("AnimationNodeOneShot_wkqvu")
+nodes/attack_ball/position = Vector2(840, 399)
+nodes/attack_boy/node = SubResource("AnimationNodeOneShot_jl73q")
+nodes/attack_boy/position = Vector2(1197, 399)
+nodes/output/position = Vector2(1638, 399)
+node_connections = [&"Add2", 0, &"Idle 2", &"Add2", 1, &"Animation 2", &"Walk", 0, &"Idle", &"Walk", 1, &"Walk_Cycle", &"attack_ball", 0, &"Walk", &"attack_ball", 1, &"Animation", &"attack_boy", 0, &"attack_ball", &"attack_boy", 1, &"Add2", &"output", 0, &"attack_boy"]
 
 [node name="Node2D" type="CharacterBody2D"]
 script = ExtResource("1_t8qj0")
+myMaterial = ExtResource("2_e2ht1")
 
 [node name="Vieja_node" type="Node2D" parent="."]
 scale = Vector2(0.5, 0.5)
@@ -1009,7 +1540,7 @@ frame = 7
 
 [node name="VTop" type="Sprite2D" parent="Vieja_node/VBottom"]
 z_index = -1
-position = Vector2(-8, -20)
+position = Vector2(-8, -13.8405)
 texture = ExtResource("2_37d4w")
 offset = Vector2(-10, -40.6466)
 hframes = 4
@@ -1017,8 +1548,8 @@ vframes = 4
 frame = 5
 
 [node name="VHead" type="Sprite2D" parent="Vieja_node/VBottom/VTop"]
-z_index = 1
-position = Vector2(-66, -90)
+z_index = 3
+position = Vector2(-61.3988, -71.5641)
 texture = ExtResource("2_37d4w")
 offset = Vector2(-40.8764, -43.3814)
 hframes = 4
@@ -1026,7 +1557,7 @@ vframes = 4
 
 [node name="VHandL" type="Sprite2D" parent="Vieja_node/VBottom/VTop"]
 z_index = 2
-position = Vector2(-40, 0)
+position = Vector2(5.86813, -17.2664)
 texture = ExtResource("2_37d4w")
 offset = Vector2(-12, 32)
 hframes = 4
@@ -1035,7 +1566,7 @@ frame = 6
 
 [node name="VFootR" type="Sprite2D" parent="Vieja_node"]
 z_index = -1
-position = Vector2(-5, -12)
+position = Vector2(-24, -12)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_37d4w")
 offset = Vector2(-24, -8)
@@ -1044,7 +1575,7 @@ vframes = 4
 frame = 8
 
 [node name="VFootL" type="Sprite2D" parent="Vieja_node"]
-position = Vector2(42, -10)
+position = Vector2(38, -14)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_37d4w")
 offset = Vector2(-26, -8)
@@ -1054,7 +1585,7 @@ frame = 8
 
 [node name="VHandR" type="Sprite2D" parent="Vieja_node"]
 z_index = -1
-position = Vector2(-92, -89)
+position = Vector2(-81, -101.558)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_37d4w")
 offset = Vector2(-20, 78)
@@ -1062,23 +1593,39 @@ hframes = 4
 vframes = 4
 frame = 4
 
+[node name="VBall" type="Sprite2D" parent="Vieja_node/VHandR"]
+visible = false
+z_index = 2
+texture = ExtResource("4_yuuu6")
+offset = Vector2(1.66666, -4.59666)
+hframes = 4
+vframes = 4
+frame = 10
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2(-1, -44)
 shape = SubResource("CapsuleShape2D_80aap")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer_vieja" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_lwc6l"),
 "Anim_Vieja": SubResource("AnimationLibrary_56nsl")
 }
 autoplay = "Anim_Vieja/Walk_cycle"
 
-[node name="AnimationTree" type="AnimationTree" parent="."]
+[node name="AnimationTree_vieja" type="AnimationTree" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_lwc6l"),
 "Anim_Vieja": SubResource("AnimationLibrary_56nsl")
 }
 tree_root = SubResource("AnimationNodeBlendTree_q35j8")
-anim_player = NodePath("../AnimationPlayer")
-parameters/Idle_walk/blend_amount = 0.0
+anim_player = NodePath("../AnimationPlayer_vieja")
+parameters/Add2/add_amount = 1.0
+parameters/Walk/blend_amount = 0.0
+parameters/attack_ball/active = true
+parameters/attack_ball/internal_active = true
+parameters/attack_ball/request = 0
+parameters/attack_boy/active = false
+parameters/attack_boy/internal_active = false
+parameters/attack_boy/request = 0

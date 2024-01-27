@@ -1,15 +1,14 @@
 class_name Pendejo_State_Machine
 extends Entity
 
-enum State
-{
+enum State{
 	IDLE,
 	MOVE,
 	CLIMB,
 	DESCEND
 }
 
-var currentState : State = State.IDLE
+var current_state : State = State.IDLE
 
 @export var speed: float = 5
 @export var target: Entity
@@ -17,66 +16,75 @@ var currentState : State = State.IDLE
 var animation_tree : AnimationTree
 
 var moveVector = Vector2(0, 0)
-
-
 var targetHeight : Vector3
 
 func _ready():
-	animation_tree = $AnimationTree_pibe
 	position3d = Vector3(position.x, 0, position.y)
 	pass
 
 func _process(delta):
-	match currentState:
-		State.IDLE:
+	if current_state == State.IDLE:
 			process_idle(delta)
+	if current_state == State.MOVE:
+			process_moving(delta)
+	if current_state == State.CLIMB:
+			process_climb(delta)
+	if current_state == State.DESCEND:
+			process_descend(delta)
+
+func changeState(new_state: State) -> void:
+	animation_tree = $AnimationTree_pibe
+	match new_state:
+		State.IDLE:
+			animation_tree.set("parameters/climb/blend_amount", 0.0)
+			animation_tree.set("parameters/Walk/blend_amount", 0.0)
 			print("IDLE")
 		State.MOVE:
-			process_moving(delta)	
+			animation_tree.set("parameters/climb/blend_amount", 0.0)
+			animation_tree.set("parameters/Walk/blend_amount", 1.0)
 			print("MOVE")
-	"""
+	
 		State.CLIMB:
-			process_climb(delta)
+			animation_tree.set("parameters/climb/blend_amount", 1.0)
+			animation_tree.set("parameters/Walk/blend_amount", 1.0)
+
 			print("CLIMB")
 		State.DESCEND:
-			process_descend(delta)
+			animation_tree.set("parameters/climb/blend_amount", 1.0)
+			animation_tree.set("parameters/Walk/blend_amount", 0.0)
 			print("DESCEND")
-	"""
+	current_state = new_state
 
 func process_idle(delta):
 		#IDLE LOGIC, AIMATION, ETC		
-		animation_tree.set("parameters/climb/blend_amount", 0.0)
-		animation_tree.set("parameters/Walk/blend_amount", 0.0)
 		if target != null:
-			currentState = State.MOVE
+			changeState(State.MOVE)
 
 func process_moving(delta):
 	#MOVING LOGIC, AIMATION, ETC	
 	if target == null:
-		currentState = State.IDLE
+		changeState(State.IDLE)
 	if target != null:
-		animation_tree.set("parameters/climb/blend_amount", 0.0)
-		animation_tree.set("parameters/Walk/blend_amount", 1.0)
-		MoveToTarget(delta)
+		MovementHandler(delta)
 """		
 	elif target.position == global_position:
 		currentState = State.CLIMB
 """
 func process_climb(delta):
-	if global_position.y >= targetHeight.y && currentState == State.CLIMB:
-		currentState = State.DESCEND
+	if global_position.y >= targetHeight.y && current_state == State.CLIMB:
+		changeState(State.DESCEND)
 	#CLIMBING LOGIC, AIMATION, ETC
 
 func process_descend(delta):
 	if position3d.y > target.position.y:
-		currentState = State.MOVE
+		changeState(State.MOVE)
 	#DESCEND LOGIC
 
-func MoveToTarget(delta):
+func MovementHandler(delta):
 	position3d = position3d.move_toward(target.position3d, speed * delta)
 	if global_position.distance_to(target.position) < 1:
+		changeState(State.IDLE)
 		print("location archived")
-		currentState = State.IDLE
 		target = null
 		"""
 		await get_tree().create_timer(2.0).timeout

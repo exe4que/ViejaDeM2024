@@ -13,5 +13,5 @@ speed = 500.0
 [node name="Pibe" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_bjnvk")]
 position = Vector2(511, -184)
 script = ExtResource("3_bklkd")
-speed = 500.0
+speed = 200.0
 target = NodePath("../Vieja")
