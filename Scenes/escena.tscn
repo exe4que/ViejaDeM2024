@@ -7,12 +7,12 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Hqdefault" type="Sprite2D" parent="."]
+z_index = -4096
 position = Vector2(574.5, 360.875)
 scale = Vector2(2.40069, 2.40069)
 texture = ExtResource("1_oswln")
 
 [node name="Vieja" parent="." instance=ExtResource("1_vp1px")]
-position = Vector2(510, 600)
 speed = 500.0
 
 [node name="DebugScene" type="Node2D" parent="."]
