@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bnmcl3qrekm8k"]
+[gd_scene load_steps=4 format=3 uid="uid://bnmcl3qrekm8k"]
 
+[ext_resource type="Script" path="res://Scripts/DebugScene.gd" id="1_628yi"]
 [ext_resource type="Texture2D" uid="uid://d0ba7a0jc5gmv" path="res://Textures/hqdefault.jpg" id="1_oswln"]
 [ext_resource type="PackedScene" uid="uid://caq41wdo3qewc" path="res://Scenes/vieja.tscn" id="1_vp1px"]
 
@@ -12,4 +13,8 @@ texture = ExtResource("1_oswln")
 
 [node name="Vieja" parent="." instance=ExtResource("1_vp1px")]
 position = Vector2(510, 600)
+speed = 500.0
+
+[node name="DebugScene" type="Node2D" parent="."]
+script = ExtResource("1_628yi")
 debug = true

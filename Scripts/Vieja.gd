@@ -1,23 +1,27 @@
 class_name Vieja
-extends CharacterBody2D
+extends Node2D
 
 @export var speed: float = 5
-@export var debug: bool = false
 
 var moveVector = Vector2(0, 0)
+var position3d = Vector3(0, 0, 0)
 
 func _ready():
+	position3d = Vector3(position.x, 0, position.y)
 	pass
 
 
 func _process(delta):
 	_handle_inputs()
-	queue_redraw()
 	pass
 
 func _physics_process(delta):
-	move_and_collide(moveVector * speed)
-	#transform.y = clampf()
+	position3d += Vector3(moveVector.x, 0, moveVector.y) * delta * speed
+	var vLimits = GlobalManager.verticalLimits
+	var hLimits = GlobalManager.horizontallLimits
+	position3d.z = clampf(position3d.z, vLimits.x, vLimits.y)
+	position3d.x = clampf(position3d.x, hLimits.x, hLimits.y)
+	position = Vector2(position3d.x, position3d.y + position3d.z)
 	pass
 	
 func _handle_inputs():
@@ -31,14 +35,3 @@ func _handle_inputs():
 	if Input.is_action_pressed("down"):
 		moveVector.y += 1
 	moveVector = moveVector.normalized()
-
-func _draw():
-	if debug:
-		draw_line(
-			Vector2(-1000, GlobalManager.verticalLimits.x), 
-			Vector2(1000, GlobalManager.verticalLimits.x), 
-			Color.SPRING_GREEN)
-		draw_line(
-			Vector2(-1000, GlobalManager.verticalLimits.y), 
-			Vector2(1000, GlobalManager.verticalLimits.y), 
-			Color.SPRING_GREEN)
