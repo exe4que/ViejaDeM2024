@@ -1,5 +1,5 @@
 class_name Pendejo_State_Machine
-extends Node2D
+extends Entity
 
 enum State
 {
@@ -12,12 +12,12 @@ enum State
 var currentState : State = State.IDLE
 
 @export var speed: float = 5
-@export var target: Node2D
+@export var target: Entity
 
 var animation_tree : AnimationTree
 
 var moveVector = Vector2(0, 0)
-var position3d = Vector3(0, 0, 0)
+
 
 var targetHeight : Vector3
 
@@ -73,9 +73,7 @@ func process_descend(delta):
 	#DESCEND LOGIC
 
 func MoveToTarget(delta):
-
-	var direction = (target.global_position - global_position). normalized()
-	global_position = global_position.move_toward(target.global_position, speed * delta)
+	position3d = position3d.move_toward(target.position3d, speed * delta)
 	if global_position.distance_to(target.position) < 1:
 		print("location archived")
 		currentState = State.IDLE
@@ -91,5 +89,5 @@ func _physics_process(delta):
 	var hLimits = GlobalManager.horizontallLimits
 	position3d.z = clampf(position3d.z, vLimits.x, vLimits.y)
 	position3d.x = clampf(position3d.x, hLimits.x, hLimits.y)
-	position = Vector2(position3d.x, position3d.y + position3d.z)
+	global_position = Vector2(position3d.x, position3d.y + position3d.z)
 	pass
