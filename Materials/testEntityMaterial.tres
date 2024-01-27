@@ -1,0 +1,8 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://2fachlqmallx"]
+
+[ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="1_jpj5p"]
+
+[resource]
+shader = ExtResource("1_jpj5p")
+shader_parameter/line_color = Color(0.956863, 0.745098, 0, 0)
+shader_parameter/line_thickness = 4.9

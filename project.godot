@@ -18,6 +18,7 @@ config/icon="res://Textures/icon.svg"
 [autoload]
 
 GlobalManager="*res://Scripts/GameManager.gd"
+EntitiesManager="*res://Scripts/EntitiesManager.gd"
 
 [display]
 
