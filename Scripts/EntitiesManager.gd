@@ -50,17 +50,17 @@ func select_entity(entity: Entity):
 	print("selected: " + entity.name)
 
 func interact_short_distance():
-	if mainCharacter.canInteractShort():
+	if mainCharacter.can_interact_short():
 		if selectedEntity != null:
-			var distance = mainCharacter.position3d.direction_to(selectedEntity.position3d)
+			var distance = mainCharacter.position3d.distance_to(selectedEntity.position3d)
 			if distance < mainCharacter.shortInteractionDistance:
-				if selectedEntity.canInteractShort():
-					selectedEntity.interactShort(mainCharacter)
-					mainCharacter.interactShort(selectedEntity)
+				if selectedEntity.can_interact_short():
+					selectedEntity.interact_short(mainCharacter)
+					mainCharacter.interact_short(selectedEntity)
 
 func interact_long_distance():
-	if mainCharacter.canInteractLong():
-		if selectedEntity.canInteractLong():
-			selectedEntity.interactLong(mainCharacter)
-			mainCharacter.interactLong(selectedEntity)
+	if mainCharacter.can_interact_long():
+		if selectedEntity.can_interact_long():
+			selectedEntity.interact_long(mainCharacter)
+			mainCharacter.interact_long(selectedEntity)
 			

@@ -16,7 +16,10 @@ func _ready():
 func _process(delta):
 	_handle_inputs()
 	_handle_mirror_sprite()
-	pass
+	queue_redraw()
+
+func _draw():
+	draw_circle(Vector2.ZERO, shortInteractionDistance, Color(1,0,0,0.3))
 	
 func _handle_mirror_sprite():
 	if moveVector.x > 0:
@@ -33,8 +36,8 @@ func _physics_process(delta):
 	global_position = Vector2(position3d.x, position3d.y + position3d.z)
 	pass
 
-
 func _handle_inputs():
+	#movement
 	moveVector = Vector2(0,0)
 	if Input.is_action_pressed("right"):
 		moveVector.x += 1
@@ -45,5 +48,25 @@ func _handle_inputs():
 	if Input.is_action_pressed("down"):
 		moveVector.y += 1
 	moveVector = moveVector.normalized()
-		
+	
+	#actions
+	if(Input.is_action_just_pressed("main_action")):
+		EntitiesManager.interact_short_distance()
+	
+	if(Input.is_action_just_pressed("secondary_action")):
+		EntitiesManager.interact_long_distance()
+
+func can_interact_short():
+	return true
+	
+func can_interact_long():
+	return true
+
+func interact_short(entity):
+	print("bastonazo!")
+	pass
+
+func interact_long(entity):
+	print("dentadura!")
+	pass
 	

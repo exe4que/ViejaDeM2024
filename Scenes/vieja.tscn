@@ -982,7 +982,7 @@ animation = &"Anim_Vieja/Idle"
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_h8mer"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_q35j8"]
-graph_offset = Vector2(-442.611, -99.8541)
+graph_offset = Vector2(-442.611, -25.1519)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_82lgy")
 nodes/Animation/position = Vector2(-140, 40)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_2r310")
