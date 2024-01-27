@@ -2,12 +2,14 @@ class_name Vieja
 extends Entity
 
 @export var speed: float = 5
+@export var shortInteractionDistance: float = 5
 
 var moveVector = Vector2(0, 0)
 
 
 func _ready():
-	position3d = Vector3(position.x, 0, position.y)
+	position3d = Vector3(global_position.x, 0, global_position.y)
+	EntitiesManager.add_main_character(self)
 	pass
 
 
@@ -32,7 +34,6 @@ func _physics_process(delta):
 	pass
 
 
-var highlighted = false;
 func _handle_inputs():
 	moveVector = Vector2(0,0)
 	if Input.is_action_pressed("right"):
@@ -45,6 +46,4 @@ func _handle_inputs():
 		moveVector.y += 1
 	moveVector = moveVector.normalized()
 		
-	if Input.is_action_just_pressed("main_action"):
-		highlighted = !highlighted
-		set_highlight(highlighted)
+	

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnmcl3qrekm8k"]
+[gd_scene load_steps=5 format=3 uid="uid://bnmcl3qrekm8k"]
 
 [ext_resource type="Script" path="res://Scripts/DebugScene.gd" id="1_628yi"]
 [ext_resource type="Texture2D" uid="uid://d0ba7a0jc5gmv" path="res://Textures/hqdefault.jpg" id="1_oswln"]
 [ext_resource type="PackedScene" uid="uid://caq41wdo3qewc" path="res://Scenes/vieja.tscn" id="1_vp1px"]
+[ext_resource type="PackedScene" uid="uid://b2foabe11hyef" path="res://Scenes/test_entity.tscn" id="4_51cpn"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -21,3 +22,15 @@ speed = 500.0
 script = ExtResource("1_628yi")
 debug = true
 metadata/_edit_lock_ = true
+
+[node name="TestEntity" parent="." instance=ExtResource("4_51cpn")]
+position = Vector2(404, 471)
+
+[node name="TestEntity2" parent="." instance=ExtResource("4_51cpn")]
+position = Vector2(595, 263)
+
+[node name="TestEntity3" parent="." instance=ExtResource("4_51cpn")]
+position = Vector2(991, 311)
+
+[node name="TestEntity4" parent="." instance=ExtResource("4_51cpn")]
+position = Vector2(975, 202)
