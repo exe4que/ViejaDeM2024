@@ -12,11 +12,11 @@ enum State
 var currentState : State = State.IDLE
 
 @export var speed: float = 5
+@export var target: Node2D
 
 var moveVector = Vector2(0, 0)
 var position3d = Vector3(0, 0, 0)
 
-var target : Node2D = null
 var targetHeight : Vector3
 
 func _ready():
@@ -24,6 +24,7 @@ func _ready():
 	pass
 
 func _process(delta):
+	print( "Target =" ,target)
 	match currentState:
 		State.IDLE:
 			process_idle(delta)
@@ -46,10 +47,11 @@ func process_idle(delta):
 
 func process_moving(delta):
 	#MOVING LOGIC, AIMATION, ETC
-	SetDirection(delta)
 	if target == null:
 		currentState = State.IDLE
-	elif target.position == global_position:		
+	if target != null:
+		MoveToTarget(delta)
+	elif target.position == global_position:
 		currentState = State.CLIMB
 
 func process_climb(delta):
@@ -65,7 +67,7 @@ func process_descend(delta):
 func SetTarget(new_target: Node2D) -> void:
 	target = new_target
 
-func SetDirection(delta):
+func MoveToTarget(delta):
 	var direction = (target.global_position - global_position). normalized()
 	global_position = global_position.move_toward(target.global_position, speed * delta)
 	if global_position.distance_to(target.position) < 1:
