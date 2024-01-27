@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://d32thde20aisn"]
+
+[ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="1_gihmy"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_gihmy")
+shader_parameter/line_color = Color(1, 0.721569, 0.0705882, 1)
+shader_parameter/line_thickness = 0.0

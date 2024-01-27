@@ -17,3 +17,8 @@ func interact_short(entity):
 
 func interact_long(entity):
 	print(self.name + " interacted long")
+
+func die():
+	EntitiesManager.remove_entity(self)
+	await get_tree().create_timer(0.2).timeout
+	queue_free()

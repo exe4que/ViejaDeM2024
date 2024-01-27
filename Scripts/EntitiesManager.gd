@@ -1,6 +1,7 @@
 extends Node
 
 var entities = []
+var entitiesToRemove = []
 var mainCharacter: Vieja
 var selectedEntity: Entity = null
 
@@ -12,7 +13,7 @@ func add_entity(entity):
 	print(entity.name)
 
 func remove_entity(entity):
-	entities.append(entity)
+	entitiesToRemove.append(entity)
 
 func get_closest_entity_in_direction(direction: Vector2):
 	var closestDistance = 1000000
@@ -27,6 +28,10 @@ func get_closest_entity_in_direction(direction: Vector2):
 		if closestEntity == null || distance < closestDistance:
 			closestEntity = entity
 			closestDistance = distance
+	for entity in entitiesToRemove:
+		entities.erase(entity)
+	
+	entitiesToRemove.clear()
 	
 	return closestEntity
 
@@ -38,8 +43,8 @@ func _process_mouse_position():
 	var mousePosition = get_viewport().get_mouse_position()
 	var direction = mousePosition - Vector2(mainCharacter.position3d.x, mainCharacter.position3d.z)
 	#print("direction: " + str(direction))
-	var closestEntity = get_closest_entity_in_direction(direction.normalized())
-	if selectedEntity != closestEntity:
+	var closestEntity: Entity = get_closest_entity_in_direction(direction.normalized())
+	if selectedEntity != closestEntity && closestEntity.can_be_highlighted():
 		select_entity(closestEntity)
 
 func select_entity(entity: Entity):
