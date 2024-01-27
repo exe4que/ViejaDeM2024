@@ -47,21 +47,22 @@ func changeState(new_state: State) -> void:
 		State.CLIMB:
 			animation_tree.set("parameters/climb/blend_amount", 1.0)
 			animation_tree.set("parameters/Walk/blend_amount", 1.0)
-
 			print("CLIMB")
+			
 		State.DESCEND:
 			animation_tree.set("parameters/climb/blend_amount", 1.0)
 			animation_tree.set("parameters/Walk/blend_amount", 0.0)
 			print("DESCEND")
+			
 	current_state = new_state
 
 func process_idle(delta):
-		#IDLE LOGIC, AIMATION, ETC		
+		#IDLE LOGIC
 		if target != null:
 			changeState(State.MOVE)
 
 func process_moving(delta):
-	#MOVING LOGIC, AIMATION, ETC	
+	#MOVING LOGIC
 	if target == null:
 		changeState(State.IDLE)
 	if target != null:
@@ -73,7 +74,7 @@ func process_moving(delta):
 func process_climb(delta):
 	if global_position.y >= targetHeight.y && current_state == State.CLIMB:
 		changeState(State.DESCEND)
-	#CLIMBING LOGIC, AIMATION, ETC
+	#CLIMBING LOGIC
 
 func process_descend(delta):
 	if position3d.y > target.position.y:
@@ -97,5 +98,5 @@ func _physics_process(delta):
 	var hLimits = GlobalManager.horizontallLimits
 	position3d.z = clampf(position3d.z, vLimits.x, vLimits.y)
 	position3d.x = clampf(position3d.x, hLimits.x, hLimits.y)
-	global_position = Vector2(position3d.x, position3d.y + position3d.z)
+	global_position = Vector2(position3d.x, position3d.z - position3d.y)
 	pass
