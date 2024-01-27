@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnmcl3qrekm8k"]
+[gd_scene load_steps=3 format=3 uid="uid://bnmcl3qrekm8k"]
 
 [ext_resource type="Texture2D" uid="uid://d0ba7a0jc5gmv" path="res://Textures/hqdefault.jpg" id="1_oswln"]
+[ext_resource type="PackedScene" uid="uid://caq41wdo3qewc" path="res://Scenes/vieja.tscn" id="1_vp1px"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -8,3 +9,7 @@
 position = Vector2(574.5, 360.875)
 scale = Vector2(2.40069, 2.40069)
 texture = ExtResource("1_oswln")
+
+[node name="Vieja" parent="." instance=ExtResource("1_vp1px")]
+position = Vector2(510, 600)
+debug = true

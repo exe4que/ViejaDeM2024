@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="GGJ2024"
+run/main_scene="res://Scenes/escena.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://Textures/icon.svg"
+
+[autoload]
+
+GlobalManager="*res://Scripts/GameManager.gd"
 
 [dotnet]
 
