@@ -1,5 +1,6 @@
-[gd_scene load_steps=16 format=3 uid="uid://n5ba5q1678fg"]
+[gd_scene load_steps=17 format=3 uid="uid://n5ba5q1678fg"]
 
+[ext_resource type="Script" path="res://Scripts/States/PendejoStateMachine.gd" id="1_2ww1l"]
 [ext_resource type="Texture2D" uid="uid://bp6gggoe3mksr" path="res://Textures/Boy/pibe_spritesheet.png" id="1_wl6ug"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8vc0b"]
@@ -1354,7 +1355,7 @@ animation = &"Anim_Pibe/Idle"
 [sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_8cqi5"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_acmsi"]
-graph_offset = Vector2(-218.434, -99.0923)
+graph_offset = Vector2(-432.145, -51.144)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_c8o1n")
 nodes/Animation/position = Vector2(280, -120)
 "nodes/Animation 2/node" = SubResource("AnimationNodeAnimation_ying3")
@@ -1369,6 +1370,8 @@ nodes/walk/position = Vector2(1020, 40)
 node_connections = [&"climb", 0, &"Animation", &"climb", 1, &"Animation 3", &"output", 0, &"walk", &"walk", 0, &"climb", &"walk", 1, &"Animation 2"]
 
 [node name="Pibe" type="CharacterBody2D"]
+script = ExtResource("1_2ww1l")
+speed = 100.0
 
 [node name="Node2D" type="Node2D" parent="."]
 scale = Vector2(0.5, 0.5)

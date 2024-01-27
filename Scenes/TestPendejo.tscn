@@ -1,17 +1,31 @@
 [gd_scene load_steps=4 format=3 uid="uid://cef5emvk0kh00"]
 
 [ext_resource type="PackedScene" uid="uid://n5ba5q1678fg" path="res://Scenes/pibe.tscn" id="2_bjnvk"]
-[ext_resource type="Script" path="res://Scripts/States/PendejoStateMachine.gd" id="3_bklkd"]
 [ext_resource type="PackedScene" uid="uid://caq41wdo3qewc" path="res://Scenes/vieja.tscn" id="3_vgcph"]
+[ext_resource type="PackedScene" uid="uid://c34dsfdgce4q5" path="res://Scenes/Fence.tscn" id="4_kmaib"]
 
 [node name="Root" type="Node2D"]
 
 [node name="Vieja" parent="." instance=ExtResource("3_vgcph")]
-position = Vector2(333, -167)
+position = Vector2(347, 518)
 speed = 500.0
 
 [node name="Pibe" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_bjnvk")]
-position = Vector2(511, -184)
-script = ExtResource("3_bklkd")
-speed = 200.0
+position = Vector2(717, 517)
 target = NodePath("../Vieja")
+
+[node name="Fence" parent="." instance=ExtResource("4_kmaib")]
+position = Vector2(442, 262)
+scale = Vector2(0.75, 0.75)
+
+[node name="Fence2" parent="." instance=ExtResource("4_kmaib")]
+position = Vector2(669, 263)
+scale = Vector2(0.75, 0.75)
+
+[node name="Fence3" parent="." instance=ExtResource("4_kmaib")]
+position = Vector2(899, 263)
+scale = Vector2(0.75, 0.75)
+
+[node name="Fence4" parent="." instance=ExtResource("4_kmaib")]
+position = Vector2(216, 263)
+scale = Vector2(0.75, 0.75)
