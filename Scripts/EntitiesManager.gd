@@ -62,6 +62,10 @@ func interact_short_distance():
 				if selectedEntity.can_interact_short():
 					selectedEntity.interact_short(mainCharacter)
 					mainCharacter.interact_short(selectedEntity)
+				else:
+					mainCharacter.interact_short(null)
+			else:
+				mainCharacter.interact_short(null)
 
 func interact_long_distance():
 	if mainCharacter.can_interact_long():
