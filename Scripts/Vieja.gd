@@ -1,12 +1,9 @@
 class_name Vieja
-extends Node2D
+extends Entity
 
 @export var speed: float = 5
-@export var myMaterial: ShaderMaterial
-
 
 var moveVector = Vector2(0, 0)
-var position3d = Vector3(0, 0, 0)
 
 
 func _ready():
@@ -51,8 +48,3 @@ func _handle_inputs():
 	if Input.is_action_just_pressed("main_action"):
 		highlighted = !highlighted
 		set_highlight(highlighted)
-		
-func set_highlight(highlighted):
-	var color = myMaterial.get_shader_parameter("line_color")
-	color.a = 1 if highlighted else 0
-	myMaterial.set_shader_parameter("line_color", color)
