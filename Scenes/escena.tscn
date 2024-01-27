@@ -11,10 +11,14 @@ z_index = -4096
 position = Vector2(574.5, 360.875)
 scale = Vector2(2.40069, 2.40069)
 texture = ExtResource("1_oswln")
+metadata/_edit_lock_ = true
 
 [node name="Vieja" parent="." instance=ExtResource("1_vp1px")]
+position = Vector2(789, 605)
+scale = Vector2(0.5, 0.5)
 speed = 500.0
 
 [node name="DebugScene" type="Node2D" parent="."]
 script = ExtResource("1_628yi")
 debug = true
+metadata/_edit_lock_ = true

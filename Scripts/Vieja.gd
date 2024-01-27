@@ -21,7 +21,7 @@ func _physics_process(delta):
 	var hLimits = GlobalManager.horizontallLimits
 	position3d.z = clampf(position3d.z, vLimits.x, vLimits.y)
 	position3d.x = clampf(position3d.x, hLimits.x, hLimits.y)
-	position = Vector2(position3d.x, position3d.y + position3d.z)
+	global_position = Vector2(position3d.x, position3d.y + position3d.z)
 	pass
 	
 func _handle_inputs():
