@@ -13,15 +13,18 @@ func _ready():
 	for sprite in sprites:
 		sprite.material = myMaterial
 
+func can_be_highlighted():
+	return true
+
 func set_highlight(highlighted):
 	var line_thickness = 4.9 if highlighted else 0
 	myMaterial.set_shader_parameter("line_thickness", line_thickness)
 
 func can_interact_short():
-	pass
+	return true
 
 func can_interact_long():
-	pass
+	return true
 	
 func interact_short(entity):
 	pass

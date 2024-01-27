@@ -3,8 +3,11 @@
 [ext_resource type="Script" path="res://Scripts/Dentadura.gd" id="1_nu8t7"]
 [ext_resource type="Texture2D" uid="uid://datmyfxnl78s3" path="res://Textures/icon.svg" id="2_w1t55"]
 
-[node name="Dentadura" type="Node2D"]
+[node name="Dentadura" type="Node2D" node_paths=PackedStringArray("sprites")]
 script = ExtResource("1_nu8t7")
+speed = 500.0
+materialPath = "res://Materials/dentaduraMaterial.tres"
+sprites = [NodePath("Sprite2D")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)

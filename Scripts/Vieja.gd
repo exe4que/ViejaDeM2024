@@ -5,13 +5,14 @@ extends Entity
 @export var shortInteractionDistance: float = 5
 
 var moveVector = Vector2(0, 0)
-
+var dentaduraRes = preload("res://Scenes/dentadura.tscn")
+var hasDentadura = true
 
 func _ready():
 	position3d = Vector3(global_position.x, 0, global_position.y)
+	hasDentadura = true
 	EntitiesManager.add_main_character(self)
 	pass
-
 
 func _process(delta):
 	_handle_inputs()
@@ -33,7 +34,7 @@ func _physics_process(delta):
 	var hLimits = GlobalManager.horizontallLimits
 	position3d.z = clampf(position3d.z, vLimits.x, vLimits.y)
 	position3d.x = clampf(position3d.x, hLimits.x, hLimits.y)
-	global_position = Vector2(position3d.x, position3d.y + position3d.z)
+	global_position = Vector2(position3d.x, position3d.z - position3d.y)
 	pass
 
 func _handle_inputs():
@@ -67,6 +68,13 @@ func interact_short(entity):
 	pass
 
 func interact_long(entity):
-	print("dentadura!")
-	pass
+	if hasDentadura:
+		var newDentadura: Dentadura = dentaduraRes.instantiate()
+		newDentadura.position3d = self.position3d + Vector3(0, 100, 0)
+		newDentadura.fly_to(entity)
+		get_tree().root.add_child(newDentadura)
+		hasDentadura = false
+
+func restore_dentadura():
+	hasDentadura = true
 	
