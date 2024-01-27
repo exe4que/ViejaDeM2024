@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://caq41wdo3qewc"]
+[gd_scene load_steps=10 format=3 uid="uid://caq41wdo3qewc"]
 
 [ext_resource type="Script" path="res://Scripts/Vieja.gd" id="1_t8qj0"]
 [ext_resource type="Texture2D" uid="uid://3fxyu3d8n00q" path="res://Textures/Vieja/vieja_spritesheet.png" id="2_37d4w"]
+[ext_resource type="Material" uid="uid://dsqqrh112ui38" path="res://Materials/viejaMaterial.tres" id="2_imi61"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_80aap"]
 radius = 18.0
@@ -804,11 +805,13 @@ _data = {
 
 [node name="Node2D" type="CharacterBody2D"]
 script = ExtResource("1_t8qj0")
+myMaterial = ExtResource("2_imi61")
 
 [node name="Vieja_node" type="Node2D" parent="."]
 scale = Vector2(0.5, 0.5)
 
 [node name="VBottom" type="Sprite2D" parent="Vieja_node"]
+material = ExtResource("2_imi61")
 position = Vector2(7, -81)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_37d4w")
@@ -819,6 +822,7 @@ frame = 7
 
 [node name="VTop" type="Sprite2D" parent="Vieja_node/VBottom"]
 z_index = -1
+material = ExtResource("2_imi61")
 position = Vector2(-8, -20)
 texture = ExtResource("2_37d4w")
 offset = Vector2(-10, -40.6466)
@@ -828,6 +832,7 @@ frame = 5
 
 [node name="VHead" type="Sprite2D" parent="Vieja_node/VBottom/VTop"]
 z_index = 1
+material = ExtResource("2_imi61")
 position = Vector2(-66, -90)
 texture = ExtResource("2_37d4w")
 offset = Vector2(-40.8764, -43.3814)
@@ -836,6 +841,7 @@ vframes = 4
 
 [node name="VHandL" type="Sprite2D" parent="Vieja_node/VBottom/VTop"]
 z_index = 2
+material = ExtResource("2_imi61")
 position = Vector2(-40, 0)
 texture = ExtResource("2_37d4w")
 offset = Vector2(-12, 32)
@@ -845,6 +851,7 @@ frame = 6
 
 [node name="VFootR" type="Sprite2D" parent="Vieja_node"]
 z_index = -1
+material = ExtResource("2_imi61")
 position = Vector2(-5, -12)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_37d4w")
@@ -854,6 +861,7 @@ vframes = 4
 frame = 8
 
 [node name="VFootL" type="Sprite2D" parent="Vieja_node"]
+material = ExtResource("2_imi61")
 position = Vector2(42, -10)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_37d4w")
@@ -864,6 +872,7 @@ frame = 8
 
 [node name="VHandR" type="Sprite2D" parent="Vieja_node"]
 z_index = -1
+material = ExtResource("2_imi61")
 position = Vector2(-92, -89)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("2_37d4w")
@@ -873,6 +882,7 @@ vframes = 4
 frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-1, -44)
 shape = SubResource("CapsuleShape2D_80aap")
 
