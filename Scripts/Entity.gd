@@ -17,14 +17,17 @@ func set_highlight(highlighted):
 	var line_thickness = 4.9 if highlighted else 0
 	myMaterial.set_shader_parameter("line_thickness", line_thickness)
 
-func canInteractShort():
+func can_interact_short():
 	pass
 
-func canInteractLong():
+func can_interact_long():
 	pass
 	
-func interactShort(entity):
+func interact_short(entity):
 	pass
 
-func interactLong(entity):
+func interact_long(entity):
+	pass
+	
+func die():
 	pass
