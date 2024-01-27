@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://caq41wdo3qewc"]
+[gd_scene load_steps=15 format=3 uid="uid://caq41wdo3qewc"]
 
 [ext_resource type="Script" path="res://Scripts/Vieja.gd" id="1_t8qj0"]
+[ext_resource type="Texture2D" uid="uid://3fxyu3d8n00q" path="res://Textures/Vieja/vieja_spritesheet.png" id="2_37d4w"]
 [ext_resource type="Texture2D" uid="uid://ms7owxwl2lvh" path="res://Textures/Vieja/V_top.tres" id="2_vahrh"]
 [ext_resource type="Texture2D" uid="uid://chwdtgka2uxp4" path="res://Textures/Vieja/V_bottom.tres" id="3_8eihx"]
 [ext_resource type="Texture2D" uid="uid://cx42ggegrghou" path="res://Textures/Vieja/V_foot.tres" id="4_cmt2a"]
@@ -88,7 +89,7 @@ tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(-156, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-92, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/7/type = "bezier"
@@ -99,7 +100,7 @@ tracks/7/interp = 1
 tracks/7/loop_wrap = true
 tracks/7/keys = {
 "handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-89, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0)
 }
 tracks/8/type = "bezier"
@@ -731,8 +732,8 @@ tracks/9/interp = 1
 tracks/9/loop_wrap = true
 tracks/9/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
-"points": PackedFloat32Array(-90, -0.25, 0, 0.25, 0, -89.0382, -0.25, 0, 0.0891206, -0.0924835, -102, -0.25, 0, 0.25, 0, -90.3468, 0, 0, 0, 0, -90, -0.0983104, 4.65302, 0.25, 0),
-"times": PackedFloat32Array(0, 0.458334, 0.708334, 0.916667, 1)
+"points": PackedFloat32Array(-101.558, -0.25, 0, 0.25, 0, -100.596, -0.25, 0, 0.0891206, -0.0924835, -113.558, -0.25, 0, 0.25, 0, -101.904, 0, 0, 0, 0, -101.558, -0.0983104, 4.65302, 0.25, 0),
+"times": PackedFloat32Array(0, 0.458333, 0.708333, 0.916667, 1)
 }
 tracks/10/type = "bezier"
 tracks/10/imported = false
@@ -752,9 +753,9 @@ tracks/11/path = NodePath("Vieja_node/VBottom/VTop/VHandL:position:x")
 tracks/11/interp = 1
 tracks/11/loop_wrap = true
 tracks/11/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(-40, -0.25, 0, 0.25, 0, -40, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
+"handle_modes": PackedInt32Array(0, 0, 0),
+"points": PackedFloat32Array(5.86813, -0.25, 0, 0.0729167, -25.0003, -56.7225, -0.25, 0, 0.25, 0, 5.86813, -0.34375, 78.2383, 0.25, 0),
+"times": PackedFloat32Array(0.0104167, 0.416667, 1.01042)
 }
 tracks/12/type = "bezier"
 tracks/12/imported = false
@@ -763,9 +764,9 @@ tracks/12/path = NodePath("Vieja_node/VBottom/VTop/VHandL:position:y")
 tracks/12/interp = 1
 tracks/12/loop_wrap = true
 tracks/12/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
+"handle_modes": PackedInt32Array(2, 2, 2, 2, 2),
+"points": PackedFloat32Array(-17.2664, 0, 0, 0.0972222, 0, -23.089, -0.0972222, 0, 0.0694444, 0, 13.0625, -0.0692673, -0.498332, 0.125, 0.899291, -5.46294, -0.0386892, 4.00814, 0.0416666, -4.3166, -17.2664, -0.166667, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.291667, 0.5, 0.666667, 1)
 }
 tracks/13/type = "bezier"
 tracks/13/imported = false
@@ -786,7 +787,7 @@ tracks/14/interp = 1
 tracks/14/loop_wrap = true
 tracks/14/keys = {
 "handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(-66, -0.25, 0, 0.25, 0, -66, -0.25, 0, 0.25, 0),
+"points": PackedFloat32Array(-61.3988, -0.25, 0, 0.25, 0, -61.3988, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 1)
 }
 tracks/15/type = "bezier"
@@ -797,7 +798,7 @@ tracks/15/interp = 1
 tracks/15/loop_wrap = true
 tracks/15/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0),
-"points": PackedFloat32Array(-90, -0.25, 0, 0.25, 0, -104.451, -0.25, 0, 0.190649, 0.378235, -83.7737, -0.116801, -1.38686, 0.190351, -0.126076, -90, -0.441187, -3.48171, 0.25, 0),
+"points": PackedFloat32Array(-78.5965, -0.25, 0, 0.25, 0, -93.0475, -0.25, 0, 0.190649, 0.378235, -72.3702, -0.116801, -1.38686, 0.190351, -0.126076, -78.5965, -0.441187, -3.48171, 0.25, 0),
 "times": PackedFloat32Array(0, 0.375, 0.583333, 1)
 }
 tracks/16/type = "bezier"
@@ -830,7 +831,7 @@ tracks/18/interp = 1
 tracks/18/loop_wrap = true
 tracks/18/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0),
-"points": PackedFloat32Array(-20, -0.25, 0, 0.25, 0, -29.2485, -0.25, 0, 0.25, 0, -15.1819, -0.25, 0, 0.125662, -0.0947247, -20, -0.31131, -2.90194, 0.25, 0),
+"points": PackedFloat32Array(-13.8405, -0.25, 0, 0.25, 0, -23.089, -0.25, 0, 0.25, 0, -9.02244, -0.25, 0, 0.125662, -0.0947247, -13.8405, -0.31131, -2.90194, 0.25, 0),
 "times": PackedFloat32Array(0, 0.291667, 0.541667, 1)
 }
 tracks/19/type = "bezier"
@@ -921,6 +922,18 @@ tracks/26/keys = {
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
 "times": PackedFloat32Array(0, 1)
 }
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Vieja_node/VBottom/VTop/VHead:frame")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.5, 0.791667, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 0, 0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_56nsl"]
 _data = {
@@ -934,44 +947,112 @@ script = ExtResource("1_t8qj0")
 
 [node name="VBottom" type="Sprite2D" parent="Vieja_node"]
 position = Vector2(7, -81)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_8eihx")
-offset = Vector2(-2, 42)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_37d4w")
+offset = Vector2(-0.333333, 38.3704)
+hframes = 4
+vframes = 4
+frame = 7
 
 [node name="VTop" type="Sprite2D" parent="Vieja_node/VBottom"]
 z_index = -1
 position = Vector2(-8, -20)
-texture = ExtResource("2_vahrh")
-offset = Vector2(-12, -44)
+texture = ExtResource("2_37d4w")
+offset = Vector2(-10, -40.6466)
+hframes = 4
+vframes = 4
+frame = 5
 
 [node name="VHead" type="Sprite2D" parent="Vieja_node/VBottom/VTop"]
 z_index = 1
 position = Vector2(-66, -90)
+texture = ExtResource("2_37d4w")
+offset = Vector2(-40.8764, -43.3814)
+hframes = 4
+vframes = 4
+
+[node name="VHandL" type="Sprite2D" parent="Vieja_node/VBottom/VTop"]
+z_index = 2
+position = Vector2(-40, 0)
+texture = ExtResource("2_37d4w")
+offset = Vector2(-12, 32)
+hframes = 4
+vframes = 4
+frame = 6
+
+[node name="VFootR" type="Sprite2D" parent="Vieja_node"]
+z_index = -1
+position = Vector2(-5, -12)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_37d4w")
+offset = Vector2(-24, -8)
+hframes = 4
+vframes = 4
+frame = 8
+
+[node name="VFootL" type="Sprite2D" parent="Vieja_node"]
+position = Vector2(42, -10)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_37d4w")
+offset = Vector2(-26, -8)
+hframes = 4
+vframes = 4
+frame = 8
+
+[node name="VHandR" type="Sprite2D" parent="Vieja_node"]
+z_index = -1
+position = Vector2(-92, -89)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_37d4w")
+offset = Vector2(-20, 78)
+hframes = 4
+vframes = 4
+frame = 4
+
+[node name="Vieja_node2" type="Node2D" parent="."]
+visible = false
+
+[node name="VBottom" type="Sprite2D" parent="Vieja_node2"]
+position = Vector2(7, -81.0287)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_8eihx")
+offset = Vector2(-2, 42)
+
+[node name="VTop" type="Sprite2D" parent="Vieja_node2/VBottom"]
+z_index = -1
+position = Vector2(-8, -20.0008)
+texture = ExtResource("2_vahrh")
+offset = Vector2(-12, -44)
+
+[node name="VHead" type="Sprite2D" parent="Vieja_node2/VBottom/VTop"]
+z_index = 1
+position = Vector2(-66, -90.0012)
+rotation = 1.9828e-05
 texture = ExtResource("7_i2ik6")
 offset = Vector2(-58, -48)
 
-[node name="VHandL" type="Sprite2D" parent="Vieja_node/VBottom/VTop"]
+[node name="VHandL" type="Sprite2D" parent="Vieja_node2/VBottom/VTop"]
 z_index = 2
 position = Vector2(-40, 0)
 texture = ExtResource("5_js5ol")
 offset = Vector2(-12, 32)
 
-[node name="VFootR" type="Sprite2D" parent="Vieja_node"]
+[node name="VFootR" type="Sprite2D" parent="Vieja_node2"]
 z_index = -1
-position = Vector2(-5, -12)
+position = Vector2(-23.9937, -12)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_cmt2a")
 offset = Vector2(-24, -8)
 
-[node name="VFootL" type="Sprite2D" parent="Vieja_node"]
-position = Vector2(42, -10)
+[node name="VFootL" type="Sprite2D" parent="Vieja_node2"]
+position = Vector2(41.995, -26.8933)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("4_cmt2a")
 offset = Vector2(-26, -8)
 
-[node name="VHandR" type="Sprite2D" parent="Vieja_node"]
+[node name="VHandR" type="Sprite2D" parent="Vieja_node2"]
 z_index = -1
-position = Vector2(-156, 0)
+position = Vector2(-80.9947, -89.9999)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_m26qh")
 offset = Vector2(-20, 78)
