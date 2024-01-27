@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxxlwk301e0sp"]
+
+[ext_resource type="Script" path="res://Scripts/Dentadura.gd" id="1_nu8t7"]
+[ext_resource type="Texture2D" uid="uid://datmyfxnl78s3" path="res://Textures/icon.svg" id="2_w1t55"]
+
+[node name="Dentadura" type="Node2D"]
+script = ExtResource("1_nu8t7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_w1t55")
