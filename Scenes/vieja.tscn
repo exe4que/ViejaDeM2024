@@ -1,8 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://caq41wdo3qewc"]
+[gd_scene load_steps=23 format=3 uid="uid://caq41wdo3qewc"]
 
 [ext_resource type="Script" path="res://Scripts/Vieja.gd" id="1_t8qj0"]
 [ext_resource type="Texture2D" uid="uid://3fxyu3d8n00q" path="res://Textures/Vieja/vieja_spritesheet.png" id="2_37d4w"]
-[ext_resource type="Material" uid="uid://dsqqrh112ui38" path="res://Materials/viejaMaterial.tres" id="2_e2ht1"]
 [ext_resource type="Texture2D" uid="uid://bp6gggoe3mksr" path="res://Textures/Boy/pibe_spritesheet.png" id="4_yuuu6"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_80aap"]
@@ -872,6 +871,44 @@ tracks/27/keys = {
 "values": [9, 10, 10]
 }
 
+[sub_resource type="Animation" id="Animation_ujwt5"]
+resource_name = "Attack_Pibe"
+loop_mode = 1
+step = 0.0416667
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vieja_node/VHandR:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-81, 0, 0, 0, 0, -56, -0.125, 0, 0.0694444, 0, -26, -0.0694444, 0, 0.166667, 0, -81, 0, 0, 0, 0, -81, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.208333, 0.375, 0.791667, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Vieja_node/VHandR:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(-101.558, 0, 0, 0, 0, -156, -0.25, 0, 0.25, 0, -104, -0.25, 0, 0.25, 0, -101.558, 0, 0, 0, 0, -101.558, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.208333, 0.375, 0.791667, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Vieja_node/VHandR:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, 0, 0, 0, 0, 2.61799, -0.125, 0, 0.0694444, 0, -0.785397, -0.0694444, 0, 0.0972222, 0, 0.261799, -0.0972169, -0.00280191, 0.208333, 0.00600442, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"times": PackedFloat32Array(0, 0.208333, 0.375, 0.583333, 0.791667, 1)
+}
+
 [sub_resource type="Animation" id="Animation_aoo6b"]
 resource_name = "Idle"
 loop_mode = 1
@@ -1428,45 +1465,6 @@ tracks/24/keys = {
 "values": [6]
 }
 
-[sub_resource type="Animation" id="Animation_ujwt5"]
-resource_name = "Attack_Pibe"
-length = 1.0
-loop_mode = 1
-step = 0.0416667
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Vieja_node/VHandR:position:x")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
-"points": PackedFloat32Array(-81, 0, 0, 0, 0, -56, -0.125, 0, 0.0694444, 0, -26, -0.0694444, 0, 0.166667, 0, -81, 0, 0, 0, 0, -81, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.208333, 0.375, 0.791667, 1)
-}
-tracks/1/type = "bezier"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Vieja_node/VHandR:position:y")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
-"points": PackedFloat32Array(-101.558, 0, 0, 0, 0, -156, -0.25, 0, 0.25, 0, -104, -0.25, 0, 0.25, 0, -101.558, 0, 0, 0, 0, -101.558, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.208333, 0.375, 0.791667, 1)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Vieja_node/VHandR:rotation")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0, 0, 0),
-"points": PackedFloat32Array(0, 0, 0, 0, 0, 2.61799, -0.125, 0, 0.0694444, 0, -0.785397, -0.0694444, 0, 0.0972222, 0, 0.261799, -0.0972169, -0.00280191, 0.208333, 0.00600442, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-"times": PackedFloat32Array(0, 0.208333, 0.375, 0.583333, 0.791667, 1)
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_56nsl"]
 _data = {
 "Attack_Ball": SubResource("Animation_jcfog"),
@@ -1500,7 +1498,7 @@ autorestart_delay = 0.0
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_jl73q"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_q35j8"]
-graph_offset = Vector2(116.145, 234.938)
+graph_offset = Vector2(555.888, 399.002)
 nodes/Add2/node = SubResource("AnimationNodeAdd2_lp0hi")
 nodes/Add2/position = Vector2(1029, 630)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_5cqeu")
@@ -1524,7 +1522,8 @@ node_connections = [&"Add2", 0, &"Idle 2", &"Add2", 1, &"Animation 2", &"Walk", 
 
 [node name="Node2D" type="CharacterBody2D"]
 script = ExtResource("1_t8qj0")
-myMaterial = ExtResource("2_e2ht1")
+speed = 300.0
+shortInteractionDistance = 100.0
 
 [node name="Vieja_node" type="Node2D" parent="."]
 scale = Vector2(0.5, 0.5)
@@ -1623,8 +1622,8 @@ tree_root = SubResource("AnimationNodeBlendTree_q35j8")
 anim_player = NodePath("../AnimationPlayer_vieja")
 parameters/Add2/add_amount = 1.0
 parameters/Walk/blend_amount = 0.0
-parameters/attack_ball/active = true
-parameters/attack_ball/internal_active = true
+parameters/attack_ball/active = false
+parameters/attack_ball/internal_active = false
 parameters/attack_ball/request = 0
 parameters/attack_boy/active = false
 parameters/attack_boy/internal_active = false

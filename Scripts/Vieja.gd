@@ -3,12 +3,16 @@ extends Entity
 
 @export var speed: float = 5
 @export var shortInteractionDistance: float = 5
+@export var idleWalkBlendDuration: float = 0.3
 
-var moveVector = Vector2(0, 0)
+var moveVector: Vector2 = Vector2(0, 0)
 var dentaduraRes = preload("res://Scenes/dentadura.tscn")
 var hasDentadura = true
+var animationTree: AnimationTree
+var move_blend = 0
 
 func _ready():
+	animationTree = $AnimationTree_vieja
 	position3d = Vector3(global_position.x, 0, global_position.y)
 	hasDentadura = true
 	EntitiesManager.add_main_character(self)
@@ -17,6 +21,7 @@ func _ready():
 func _process(delta):
 	_handle_inputs()
 	_handle_mirror_sprite()
+	_handle_animations(delta)
 	queue_redraw()
 
 func _draw():
@@ -27,6 +32,15 @@ func _handle_mirror_sprite():
 		scale.x = -1
 	else: if moveVector.x < 0:
 		scale.x = 1
+
+func _handle_animations(delta):
+	if moveVector.length() > 0:
+		move_blend += (1.0 / idleWalkBlendDuration) * delta;
+	else:
+		move_blend -= (1.0 / idleWalkBlendDuration) * delta;
+	move_blend = clamp(move_blend, 0, 1)
+	animationTree.set("parameters/Walk/blend_amount", move_blend)
+	
 
 func _physics_process(delta):
 	position3d += Vector3(moveVector.x, 0, moveVector.y) * delta * speed
@@ -64,8 +78,13 @@ func can_interact_long():
 	return true
 
 func interact_short(entity):
-	print("bastonazo!")
-	pass
+	if entity is Dentadura:
+		return
+	animationTree.set("parameters/attack_boy/request", 
+	AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
+	await get_tree().create_timer(0.5).timeout
+	animationTree.set("parameters/attack_boy/request", 
+	AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT)
 
 func interact_long(entity):
 	if hasDentadura:
