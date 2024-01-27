@@ -13,7 +13,14 @@ func _ready():
 
 func _process(delta):
 	_handle_inputs()
+	_handle_mirror_sprite()
 	pass
+	
+func _handle_mirror_sprite():
+	if moveVector.x > 0:
+		scale.x = -1
+	else: if moveVector.x < 0:
+		scale.x = 1
 
 func _physics_process(delta):
 	position3d += Vector3(moveVector.x, 0, moveVector.y) * delta * speed
