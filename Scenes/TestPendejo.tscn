@@ -1,17 +1,17 @@
 [gd_scene load_steps=4 format=3 uid="uid://cef5emvk0kh00"]
 
-[ext_resource type="PackedScene" uid="uid://c2jeeamvyp7li" path="res://Scenes/EscenaPendejo.tscn" id="1_vchuu"]
+[ext_resource type="PackedScene" uid="uid://n5ba5q1678fg" path="res://Scenes/pibe.tscn" id="2_bjnvk"]
 [ext_resource type="Script" path="res://Scripts/States/PendejoStateMachine.gd" id="3_bklkd"]
 [ext_resource type="PackedScene" uid="uid://caq41wdo3qewc" path="res://Scenes/vieja.tscn" id="3_vgcph"]
 
 [node name="Root" type="Node2D"]
 
-[node name="Abuela" parent="." instance=ExtResource("3_vgcph")]
-position = Vector2(-106, -168)
+[node name="Vieja" parent="." instance=ExtResource("3_vgcph")]
+position = Vector2(333, -167)
 speed = 500.0
 
-[node name="Pendejo" parent="." node_paths=PackedStringArray("target") instance=ExtResource("1_vchuu")]
-position = Vector2(248, -215)
+[node name="Pibe" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_bjnvk")]
+position = Vector2(511, -184)
 script = ExtResource("3_bklkd")
-speed = 100.0
-target = NodePath("../Abuela")
+speed = 500.0
+target = NodePath("../Vieja")
