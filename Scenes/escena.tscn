@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bnmcl3qrekm8k"]
+[gd_scene load_steps=8 format=3 uid="uid://bnmcl3qrekm8k"]
 
 [ext_resource type="Script" path="res://Scripts/DebugScene.gd" id="1_628yi"]
 [ext_resource type="Texture2D" uid="uid://wog7rwn46wke" path="res://Textures/Environment/grass.png" id="1_u5buj"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cydsaglb1qu3" path="res://Scenes/spawner.tscn" id="4_77kjh"]
 [ext_resource type="Texture2D" uid="uid://btne8yxjfltkr" path="res://Textures/Environment/Fence.png" id="5_agcqf"]
 [ext_resource type="Texture2D" uid="uid://46s6p0ew4yq2" path="res://Textures/Environment/Fence_gate.png" id="6_s2ihq"]
+[ext_resource type="AudioStream" uid="uid://0t5btwbuwtje" path="res://Audio/BeepBox-Song.wav" id="7_dhjgl"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -55,3 +56,7 @@ texture = ExtResource("5_agcqf")
 position = Vector2(951, 248)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("6_s2ihq")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_dhjgl")
+autoplay = true
