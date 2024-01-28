@@ -10,8 +10,8 @@ func add_main_character(entity: Entity):
 
 func add_entity(entity):
 	entities.append(entity)
-	print("added: " + entity.name)
-	print("entities count: " + str(entities.size()))
+	#print("added: " + entity.name)
+	#print("entities count: " + str(entities.size()))
 
 func remove_entity(entity):
 	entitiesToRemove.append(entity)
@@ -31,7 +31,7 @@ func get_closest_entity_in_direction(direction: Vector2):
 			closestDistance = distance
 	for entity in entitiesToRemove:
 		entities.erase(entity)
-		print("removed: " + entity.name)
+		#print("removed: " + entity.name)
 	
 	entitiesToRemove.clear()
 	
