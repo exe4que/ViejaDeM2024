@@ -112,7 +112,7 @@ func changeState(new_state: State) -> void:
 			current_state = new_state
 			await get_tree().create_timer(2).timeout
 			queue_free()
-
+			
 			if gotTheBall && !died:
 				GlobalManager.lost()
 
