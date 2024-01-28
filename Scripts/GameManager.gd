@@ -10,6 +10,7 @@ signal level_lost()
 var gameDuration = 3 * 60
 var running = true
 var endTimestamp = 0
+var progress: float = 0
 
 func start():
 	running = true
@@ -19,7 +20,9 @@ func start():
 func _process(delta):
 	if running:
 		var time = Time.get_ticks_usec() / 1000000
-		var timeLeft = endTimestamp - time
+		var timeLeft:float = endTimestamp - time
+		progress = 1 - (timeLeft / gameDuration)
+		progress = clampf(progress, 0, 1)
 		if timeLeft <= 0:
 			won()
 
