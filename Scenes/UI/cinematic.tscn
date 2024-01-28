@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://csuncpkeyicnh"]
+
+[ext_resource type="Script" path="res://Scripts/TransitionScreen.gd" id="1_nte01"]
+[ext_resource type="Texture2D" uid="uid://wog7rwn46wke" path="res://Textures/Environment/grass.png" id="2_o3hdj"]
+
+[node name="Cinematic" type="Node2D"]
+script = ExtResource("1_nte01")
+
+[node name="Grass" type="Sprite2D" parent="."]
+position = Vector2(572.5, 322.5)
+scale = Vector2(1.13184, 0.631836)
+texture = ExtResource("2_o3hdj")
