@@ -92,6 +92,7 @@ func process_moving(delta):
 			changeState(State.DEAD)
 	if target != null:
 		position3d = position3d.move_toward(target.position3d, speed * delta)
+		position3d.y = 0
 		if global_position.distance_to(target.position) < 1:
 			if chasingFence:
 				changeState(State.CLIMB)
