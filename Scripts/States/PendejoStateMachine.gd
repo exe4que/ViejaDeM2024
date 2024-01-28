@@ -188,7 +188,8 @@ func can_be_highlighted():
 func interact_short(entity):
 	changeState(State.DEAD)
 	$Bonk.play()
-
+	await get_tree().create_timer(1.5).timeout
+	$MeTienenPodrida.play()
 func interact_long(entity):
 	changeState(State.IDLE)
 

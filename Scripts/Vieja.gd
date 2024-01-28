@@ -105,9 +105,11 @@ func interact_short(entity):
 	await get_tree().create_timer(0.5).timeout
 	animationTree.set("parameters/attack_boy/request", 
 	AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT)
+	
 
 func interact_long(entity):
 	if hasDentadura:
+		$"../AlejensceDeMiCesped".play()
 		var newDentadura: Dentadura = dentaduraRes.instantiate()
 		newDentadura.position3d = self.position3d + Vector3(0, 100, 0)
 		newDentadura.fly_to(entity)
@@ -121,6 +123,7 @@ func get_center_point():
 	return position3d + Vector3(0,50,0)
 	
 func stabBallSFX():
+	$"../PelotaDeM".play()
 	await get_tree().create_timer(0.2).timeout
 	$"../Knife".play()
 	await get_tree().create_timer(0.8).timeout

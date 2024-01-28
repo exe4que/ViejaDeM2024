@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bnmcl3qrekm8k"]
+[gd_scene load_steps=15 format=3 uid="uid://bnmcl3qrekm8k"]
 
 [ext_resource type="Script" path="res://Scripts/DebugScene.gd" id="1_628yi"]
 [ext_resource type="Texture2D" uid="uid://wog7rwn46wke" path="res://Textures/Environment/grass.png" id="1_u5buj"]
@@ -12,6 +12,8 @@
 [ext_resource type="AudioStream" uid="uid://cfy1ojc5i0f6c" path="res://Audio/knife.mp3" id="8_kqu12"]
 [ext_resource type="AudioStream" uid="uid://dxd65jjvlu76" path="res://Audio/stabBall.mp3" id="9_n3qgp"]
 [ext_resource type="Texture2D" uid="uid://cdp2qk63i7u0s" path="res://Textures/Environment/calle.png" id="12_btqn4"]
+[ext_resource type="AudioStream" uid="uid://b50x8n16orjwh" path="res://Audio/AlejensceDeMiCesped.mp3" id="12_g6npf"]
+[ext_resource type="AudioStream" uid="uid://o3ctwgj70vu5" path="res://Audio/PelotaDeMierda.mp3" id="13_6x1ic"]
 
 [node name="Node2D2" type="Node2D"]
 
@@ -189,6 +191,7 @@ texture = ExtResource("6_s2ihq")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_dhjgl")
+volume_db = 4.087
 autoplay = true
 
 [node name="Knife" type="AudioStreamPlayer2D" parent="."]
@@ -198,5 +201,15 @@ volume_db = -12.716
 [node name="Stab" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("9_n3qgp")
 volume_db = 4.576
+
+[node name="AlejensceDeMiCesped" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_g6npf")
+volume_db = 1.778
+pitch_scale = 1.13
+
+[node name="PelotaDeM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_6x1ic")
+volume_db = 9.142
+pitch_scale = 1.13
 
 [node name="CanvasLayer" parent="." instance=ExtResource("8_4baee")]
