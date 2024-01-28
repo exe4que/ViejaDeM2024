@@ -83,15 +83,15 @@ func changeState(new_state: State) -> void:
 	match new_state:
 		State.IDLE:
 			animation_tree.set("parameters/climb/blend_amount", 0.0)
-			animation_tree.set("parameters/Walk/blend_amount", 0.0)
+			animation_tree.set("parameters/walk/blend_amount", 0.0)
 			#print("IDLE")
 		State.MOVE:
 			animation_tree.set("parameters/climb/blend_amount", 0.0)
-			animation_tree.set("parameters/Walk/blend_amount", 1.0)
+			animation_tree.set("parameters/walk/blend_amount", 1.0)
 			#print("MOVE")
 		State.CLIMB:
 			animation_tree.set("parameters/climb/blend_amount", 1.0)
-			animation_tree.set("parameters/Walk/blend_amount", 1.0)
+			animation_tree.set("parameters/walk/blend_amount", 0.0)
 			#print("CLIMB")
 		State.DESCEND:
 			for sprite in sprites:
