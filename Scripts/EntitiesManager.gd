@@ -79,4 +79,8 @@ func interact_long_distance():
 		if selectedEntity.can_interact_long():
 			selectedEntity.interact_long(mainCharacter)
 			mainCharacter.interact_long(selectedEntity)
+
+func reset():
+	entities.clear()
+	entitiesToRemove.clear()
 			
