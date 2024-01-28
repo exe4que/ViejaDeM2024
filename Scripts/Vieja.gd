@@ -22,8 +22,6 @@ func _ready():
 	GlobalManager.start()
 
 func _process(delta):
-	if !GlobalManager.running:
-		return
 	if inputEnabled:
 		_handle_inputs()
 	else:

@@ -11,6 +11,7 @@ func _process(delta):
 	var time = Time.get_ticks_usec() / 1000000
 	var timeLeft = GlobalManager.endTimestamp - time
 	var duration: float = GlobalManager.gameDuration
+	print("time left: " + str(timeLeft) + "/ duration: " + str(duration))
 	var progress = timeLeft / duration
 	progress = clampf(progress, 0, 1)
 	var progressPercent = progress * 100

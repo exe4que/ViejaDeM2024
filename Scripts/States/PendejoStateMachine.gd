@@ -56,8 +56,6 @@ func set_target(entity: Entity):
 	target = entity
 
 func _process(delta):
-	if !GlobalManager.running:
-		return
 	if !gotTheBall && current_state != State.DEAD && current_state != State.EXIT && ballTarget == null:
 		changeState(State.DEAD)
 	else: if current_state == State.IDLE:
@@ -111,8 +109,6 @@ func changeState(new_state: State) -> void:
 			current_state = new_state
 			await get_tree().create_timer(2).timeout
 			queue_free()
-			if gotTheBall:
-				GlobalManager.lost()
 	current_state = new_state
 
 func process_idle(delta):
