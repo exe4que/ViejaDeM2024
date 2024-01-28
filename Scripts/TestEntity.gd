@@ -13,10 +13,10 @@ func can_interact_long():
 	return true
 
 func interact_short(entity):
-	print(self.name + " interacted short")
+	return
 
 func interact_long(entity):
-	print(self.name + " interacted long")
+	return
 
 func die():
 	EntitiesManager.remove_entity(self)

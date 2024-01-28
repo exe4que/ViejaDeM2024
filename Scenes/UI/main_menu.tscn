@@ -85,17 +85,20 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "Start"
 
-[node name="ControlsButton" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-text = "Controls
-"
-
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Quit
 "
+
+[node name="ControlsButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Controls: 
+Movement = WASD
+Attack Melee = Left Clicl
+Attack Distance : Right Click"
+alignment = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../Menu/ColorRect2")
@@ -104,3 +107,4 @@ libraries = {
 }
 
 [connection signal="button_down" from="VBoxContainer/StartButton" to="." method="_on_start_button_button_down"]
+[connection signal="button_up" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_button_up"]
