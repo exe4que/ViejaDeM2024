@@ -1498,7 +1498,6 @@ autorestart_delay = 0.0
 [sub_resource type="AnimationNodeOneShot" id="AnimationNodeOneShot_jl73q"]
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_q35j8"]
-graph_offset = Vector2(174.492, 280.716)
 nodes/Add2/node = SubResource("AnimationNodeAdd2_lp0hi")
 nodes/Add2/position = Vector2(1029, 630)
 nodes/Animation/node = SubResource("AnimationNodeAnimation_5cqeu")

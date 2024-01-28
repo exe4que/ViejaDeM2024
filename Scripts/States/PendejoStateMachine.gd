@@ -84,14 +84,17 @@ func changeState(new_state: State) -> void:
 		State.IDLE:
 			animation_tree.set("parameters/climb/blend_amount", 0.0)
 			animation_tree.set("parameters/walk/blend_amount", 0.0)
+			animation_tree.set("parameters/WalkSad/blend_amount", 0.0)
 			#print("IDLE")
 		State.MOVE:
 			animation_tree.set("parameters/climb/blend_amount", 0.0)
 			animation_tree.set("parameters/walk/blend_amount", 1.0)
+			animation_tree.set("parameters/WalkSad/blend_amount", 0.0)
 			#print("MOVE")
 		State.CLIMB:
 			animation_tree.set("parameters/climb/blend_amount", 1.0)
 			animation_tree.set("parameters/walk/blend_amount", 0.0)
+			animation_tree.set("parameters/WalkSad/blend_amount", 0.0)
 			#print("CLIMB")
 		State.DESCEND:
 			for sprite in sprites:
@@ -102,10 +105,12 @@ func changeState(new_state: State) -> void:
 				EntitiesManager.add_entity(self)
 			animation_tree.set("parameters/climb/blend_amount", 1.0)
 			animation_tree.set("parameters/Walk/blend_amount", 0.0)
+			animation_tree.set("parameters/walkSad/blend_amount", 0.0)
 			#print("DESCEND")
 		State.DEAD:
 			animation_tree.set("parameters/climb/blend_amount", 0.0)
-			animation_tree.set("parameters/Walk/blend_amount", 1.0)
+			animation_tree.set("parameters/walk/blend_amount", 0.0)
+			animation_tree.set("parameters/walkSad/blend_amount", 1.0)
 			died = true
 			#print("DEAD")
 		State.EXIT:

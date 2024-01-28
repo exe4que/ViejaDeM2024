@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://bnmcl3qrekm8k"]
 
 [ext_resource type="Script" path="res://Scripts/DebugScene.gd" id="1_628yi"]
-[ext_resource type="Texture2D" path="res://Textures/Environment/grass.png" id="1_u5buj"]
+[ext_resource type="Texture2D" uid="uid://wog7rwn46wke" path="res://Textures/Environment/grass.png" id="1_u5buj"]
 [ext_resource type="PackedScene" uid="uid://caq41wdo3qewc" path="res://Scenes/vieja.tscn" id="1_vp1px"]
 [ext_resource type="Texture2D" uid="uid://clh6yd21eck1v" path="res://Textures/Environment/vereda.png" id="2_2n4fh"]
 [ext_resource type="PackedScene" uid="uid://cydsaglb1qu3" path="res://Scenes/spawner.tscn" id="4_77kjh"]
@@ -13,7 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://dxd65jjvlu76" path="res://Audio/stabBall.mp3" id="9_n3qgp"]
 [ext_resource type="Texture2D" uid="uid://cdp2qk63i7u0s" path="res://Textures/Environment/calle.png" id="12_btqn4"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="Hqdefault" type="Sprite2D" parent="."]
 z_index = -4096
