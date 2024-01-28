@@ -22,6 +22,7 @@ metadata/_edit_lock_ = true
 [node name="Vieja" parent="." instance=ExtResource("1_vp1px")]
 position = Vector2(782, 597)
 speed = 500.0
+shortInteractionDistance = 50.0
 
 [node name="DebugScene" type="Node2D" parent="."]
 script = ExtResource("1_628yi")

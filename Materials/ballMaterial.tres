@@ -4,5 +4,5 @@
 
 [resource]
 shader = ExtResource("1_wr5po")
-shader_parameter/line_color = Color(0.956863, 0.745098, 0, 0)
-shader_parameter/line_thickness = 4.9
+shader_parameter/line_color = Color(1, 0.721569, 0.0705882, 1)
+shader_parameter/line_thickness = 0.0

@@ -1,9 +1,11 @@
 extends Node2D
 @export var spawnFrecuencyStart: float = 7
-@export var spawnFrecuencyEnd: float = 1
+@export var spawnFrecuencyEnd: float = 2
 
 var currentSpawnFrecuency = 7
 var ballRes = preload("res://Scenes/ball.tscn")
+var boyRes = preload("res://Scenes/pibe.tscn")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	currentSpawnFrecuency = spawnFrecuencyStart
@@ -18,7 +20,11 @@ func _ready():
 		var newBall = ballRes.instantiate()
 		add_child(newBall)
 		newBall.initialize(newPos)
-		print(newBall.name)
+		
+		#var newBoy = boyRes.instantiate()
+		#add_child(newBoy)
+		#newBoy.initialize(newBall)
+		
 		await get_tree().create_timer(currentSpawnFrecuency).timeout
 
 

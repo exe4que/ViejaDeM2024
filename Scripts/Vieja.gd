@@ -10,16 +10,21 @@ var dentaduraRes = preload("res://Scenes/dentadura.tscn")
 var hasDentadura = true
 var animationTree: AnimationTree
 var move_blend = 0
+var inputEnabled = true
 
 func _ready():
 	animationTree = $AnimationTree_vieja
 	position3d = Vector3(global_position.x, 0, global_position.y)
 	hasDentadura = true
+	inputEnabled = true
 	EntitiesManager.add_main_character(self)
 	pass
 
 func _process(delta):
-	_handle_inputs()
+	if inputEnabled:
+		_handle_inputs()
+	else:
+		moveVector = Vector2(0,0)
 	_handle_mirror_sprite()
 	_handle_animations(delta)
 	queue_redraw()
@@ -79,6 +84,15 @@ func can_interact_long():
 
 func interact_short(entity):
 	if entity is Dentadura:
+		return
+	if entity is Ball:
+		animationTree.set("parameters/attack_ball/request", 
+		AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
+		inputEnabled = false
+		await get_tree().create_timer(2).timeout
+		inputEnabled = true
+		animationTree.set("parameters/attack_ball/request", 
+		AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT)
 		return
 	animationTree.set("parameters/attack_boy/request", 
 	AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)

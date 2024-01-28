@@ -10,7 +10,7 @@ func add_main_character(entity: Entity):
 
 func add_entity(entity):
 	entities.append(entity)
-	print(entity.name)
+	print("added: " + entity.name)
 
 func remove_entity(entity):
 	entitiesToRemove.append(entity)
@@ -30,22 +30,24 @@ func get_closest_entity_in_direction(direction: Vector2):
 			closestDistance = distance
 	for entity in entitiesToRemove:
 		entities.erase(entity)
+		print("removed: " + entity.name)
 	
 	entitiesToRemove.clear()
 	
 	return closestEntity
 
 func _process(delta):
-	#_process_mouse_position()
-	pass
-	
+	if mainCharacter != null:
+		_process_mouse_position()
 
 func _process_mouse_position():
 	var mousePosition = get_viewport().get_mouse_position()
 	var direction = mousePosition - Vector2(mainCharacter.position3d.x, mainCharacter.position3d.z)
 	#print("direction: " + str(direction))
 	var closestEntity: Entity = get_closest_entity_in_direction(direction.normalized())
-	if selectedEntity != closestEntity && closestEntity.can_be_highlighted():
+	if closestEntity == null:
+		selectedEntity = null
+	if closestEntity != null && selectedEntity != closestEntity && closestEntity.can_be_highlighted():
 		select_entity(closestEntity)
 
 func select_entity(entity: Entity):
