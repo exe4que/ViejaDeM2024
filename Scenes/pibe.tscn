@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://n5ba5q1678fg"]
+[gd_scene load_steps=18 format=3 uid="uid://n5ba5q1678fg"]
 
 [ext_resource type="Script" path="res://Scripts/States/PendejoStateMachine.gd" id="1_2ww1l"]
 [ext_resource type="Texture2D" uid="uid://bp6gggoe3mksr" path="res://Textures/Boy/pibe_spritesheet.png" id="1_wl6ug"]
+[ext_resource type="Script" path="res://Scripts/TestEntity.gd" id="3_t44db"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8vc0b"]
 radius = 18.0
@@ -1371,7 +1372,6 @@ node_connections = [&"climb", 0, &"Animation", &"climb", 1, &"Animation 3", &"ou
 
 [node name="Pibe" type="CharacterBody2D"]
 script = ExtResource("1_2ww1l")
-speed = 100.0
 
 [node name="Node2D" type="Node2D" parent="."]
 scale = Vector2(0.5, 0.5)
@@ -1456,3 +1456,7 @@ tree_root = SubResource("AnimationNodeBlendTree_acmsi")
 anim_player = NodePath("../AnimationPlayer_pibe")
 parameters/climb/blend_amount = 0.0
 parameters/walk/blend_amount = 0.0
+
+[node name="ClimbTarget" type="Node2D" parent="."]
+script = ExtResource("3_t44db")
+materialPath = "res://Materials/testEntityMaterial.tres"

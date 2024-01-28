@@ -5,32 +5,57 @@ enum State{
 	IDLE,
 	MOVE,
 	CLIMB,
-	DESCEND
+	DESCEND,
+	DEAD
 }
 
 var current_state : State = State.IDLE
 
-@export var speed: float = 5
+@export var speed: float = 100
+@export var climbSpeed: float = 100
 @export var target: Entity
 
 var animation_tree : AnimationTree
 
 var moveVector = Vector2(0, 0)
-var targetHeight : Vector3
+var targetHeight : float
+var climbTarget: Entity
+var ballTarget: Entity
 
-func _ready():
-	position3d = Vector3(position.x, 0, position.y)
-	pass
+var chasingFence = false
+var initialized = false
+var gotTheBall = false
+var chasingBall = false
+var escaping = false
+
+func initialize(ballEntity: Entity):
+	super._ready()
+	climbTarget = $ClimbTarget
+	ballTarget = ballEntity
+	chasingBall = false
+	gotTheBall = false
+	escaping = false
+	chase_climb_target()
+	
+	
+func chase_climb_target():
+	climbTarget.position3d = Vector3(position3d.x, 0, GlobalManager.verticalLimits.y)
+	set_target(climbTarget)
+	chasingFence = true
+	changeState(State.MOVE)
+
+func set_target(entity: Entity):
+	target = entity
 
 func _process(delta):
 	if current_state == State.IDLE:
-			process_idle(delta)
+		process_idle(delta)
 	if current_state == State.MOVE:
-			process_moving(delta)
+		process_moving(delta)
 	if current_state == State.CLIMB:
-			process_climb(delta)
+		process_climb(delta)
 	if current_state == State.DESCEND:
-			process_descend(delta)
+		process_descend(delta)
 
 func changeState(new_state: State) -> void:
 	animation_tree = $AnimationTree_pibe
@@ -43,54 +68,62 @@ func changeState(new_state: State) -> void:
 			animation_tree.set("parameters/climb/blend_amount", 0.0)
 			animation_tree.set("parameters/Walk/blend_amount", 1.0)
 			print("MOVE")
-	
 		State.CLIMB:
 			animation_tree.set("parameters/climb/blend_amount", 1.0)
 			animation_tree.set("parameters/Walk/blend_amount", 1.0)
-
 			print("CLIMB")
 		State.DESCEND:
 			animation_tree.set("parameters/climb/blend_amount", 1.0)
 			animation_tree.set("parameters/Walk/blend_amount", 0.0)
 			print("DESCEND")
+		State.DEAD:
+			climbTarget.position3d = Vector3(-100, 0, position3d.z)
+			set_target(climbTarget)
 	current_state = new_state
 
 func process_idle(delta):
-		#IDLE LOGIC, AIMATION, ETC		
-		if target != null:
-			changeState(State.MOVE)
+	pass
+	 
 
 func process_moving(delta):
 	#MOVING LOGIC, AIMATION, ETC	
 	if target == null:
-		changeState(State.IDLE)
+		if chasingBall:
+			changeState(State.DEAD)
 	if target != null:
-		MovementHandler(delta)
-"""		
-	elif target.position == global_position:
-		currentState = State.CLIMB
-"""
+		position3d = position3d.move_toward(target.position3d, speed * delta)
+		if global_position.distance_to(target.position) < 1:
+			if chasingFence:
+				changeState(State.CLIMB)
+			else: if chasingBall:
+					chasingBall = false
+					gotTheBall = true
+					chase_climb_target()
+			else: if escaping:
+				changeState(State.IDLE)
+			print("location archived")
+
+
 func process_climb(delta):
-	if global_position.y >= targetHeight.y && current_state == State.CLIMB:
+	position3d.y += climbSpeed * delta
+	if position3d.y > targetHeight && current_state == State.CLIMB:
 		changeState(State.DESCEND)
 	#CLIMBING LOGIC, AIMATION, ETC
 
 func process_descend(delta):
-	if position3d.y > target.position.y:
+	position3d.y -= climbSpeed * delta
+	if position3d.y < GlobalManager.verticalLimits.y:
+		if gotTheBall:
+			#escape
+			climbTarget.position3d = Vector3(position3d.x, 0, -1000)
+			escaping = true
+			set_target(climbTarget)
+		else:
+			chasingBall = true
+			set_target(ballTarget)
 		changeState(State.MOVE)
 	#DESCEND LOGIC
 
-func MovementHandler(delta):
-	position3d = position3d.move_toward(target.position3d, speed * delta)
-	if global_position.distance_to(target.position) < 1:
-		changeState(State.IDLE)
-		print("location archived")
-		target = null
-		"""
-		await get_tree().create_timer(2.0).timeout
-		currentState = State.MOVE
-		return
-"""
 func _physics_process(delta):
 	position3d += Vector3(moveVector.x, 0, moveVector.y) * delta * speed
 	var vLimits = GlobalManager.verticalLimits
