@@ -20,6 +20,7 @@ func _ready():
 		var newBall = ballRes.instantiate()
 		add_child(newBall)
 		newBall.initialize(newPos)
+		ballSound()
 		
 		var newBoy = boyRes.instantiate()
 		add_child(newBoy)
@@ -27,7 +28,15 @@ func _ready():
 		
 		await get_tree().create_timer(currentSpawnFrecuency).timeout
 
-
+func ballSound():
+	await get_tree().create_timer(1).timeout
+	$BallAudio.play()
+	await get_tree().create_timer(1,95).timeout
+	$BallAudio.play()
+	await get_tree().create_timer(0.7).timeout
+	$BallAudio.play()
+	await get_tree().create_timer(0.3).timeout
+	$BallAudio.play()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass

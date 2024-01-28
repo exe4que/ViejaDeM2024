@@ -88,6 +88,7 @@ func interact_short(entity):
 	if entity is Ball:
 		animationTree.set("parameters/attack_ball/request", 
 		AnimationNodeOneShot.ONE_SHOT_REQUEST_FIRE)
+		stabBallSFX()
 		inputEnabled = false
 		await get_tree().create_timer(2).timeout
 		inputEnabled = true
@@ -111,3 +112,8 @@ func interact_long(entity):
 func restore_dentadura():
 	hasDentadura = true
 	
+func stabBallSFX():
+	await get_tree().create_timer(0.2).timeout
+	$"../Knife".play()
+	await get_tree().create_timer(0.8).timeout
+	$"../Stab".play()

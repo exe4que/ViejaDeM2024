@@ -164,6 +164,8 @@ func _physics_process(delta):
 
 func interact_short(entity):
 	changeState(State.DEAD)
+	$Bonk.play()
+
 
 func interact_long(entity):
 	changeState(State.IDLE)

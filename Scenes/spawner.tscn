@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cydsaglb1qu3"]
+[gd_scene load_steps=3 format=3 uid="uid://cydsaglb1qu3"]
 
 [ext_resource type="Script" path="res://Scripts/BoySpawner.gd" id="1_lj4ud"]
+[ext_resource type="AudioStream" uid="uid://df3ipafblh8sn" path="res://Audio/ballBounce01.mp3" id="2_xqxq6"]
 
 [node name="Spawner" type="Node2D"]
 script = ExtResource("1_lj4ud")
+
+[node name="BallAudio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_xqxq6")

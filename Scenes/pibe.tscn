@@ -1,8 +1,9 @@
-[gd_scene load_steps=18 format=3 uid="uid://n5ba5q1678fg"]
+[gd_scene load_steps=19 format=3 uid="uid://n5ba5q1678fg"]
 
 [ext_resource type="Script" path="res://Scripts/States/PendejoStateMachine.gd" id="1_2ww1l"]
 [ext_resource type="Texture2D" uid="uid://bp6gggoe3mksr" path="res://Textures/Boy/pibe_spritesheet.png" id="1_wl6ug"]
 [ext_resource type="Script" path="res://Scripts/TestEntity.gd" id="3_t44db"]
+[ext_resource type="AudioStream" uid="uid://cwbl11qu0lc2q" path="res://Audio/bonk.mp3" id="4_7jso0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8vc0b"]
 radius = 18.0
@@ -1462,3 +1463,6 @@ parameters/walk/blend_amount = 0.0
 [node name="ClimbTarget" type="Node2D" parent="."]
 script = ExtResource("3_t44db")
 materialPath = "res://Materials/testEntityMaterial.tres"
+
+[node name="Bonk" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_7jso0")
