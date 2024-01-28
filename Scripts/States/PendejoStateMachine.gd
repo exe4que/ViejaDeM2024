@@ -28,6 +28,7 @@ var initialized = false
 var gotTheBall = false
 var chasingBall = false
 var escaping = false
+var died = false
 
 func _ready():
 	myMaterial = load(materialPath).duplicate()
@@ -42,6 +43,7 @@ func initialize(ballEntity: Entity):
 	chasingBall = false
 	gotTheBall = false
 	escaping = false
+	died = false
 	targetHeight = 220
 	chase_climb_target()
 	
@@ -82,15 +84,15 @@ func changeState(new_state: State) -> void:
 		State.IDLE:
 			animation_tree.set("parameters/climb/blend_amount", 0.0)
 			animation_tree.set("parameters/Walk/blend_amount", 0.0)
-			print("IDLE")
+			#print("IDLE")
 		State.MOVE:
 			animation_tree.set("parameters/climb/blend_amount", 0.0)
 			animation_tree.set("parameters/Walk/blend_amount", 1.0)
-			print("MOVE")
+			#print("MOVE")
 		State.CLIMB:
 			animation_tree.set("parameters/climb/blend_amount", 1.0)
 			animation_tree.set("parameters/Walk/blend_amount", 1.0)
-			print("CLIMB")
+			#print("CLIMB")
 		State.DESCEND:
 			for sprite in sprites:
 				sprite.material = myMaterial
@@ -100,18 +102,19 @@ func changeState(new_state: State) -> void:
 				EntitiesManager.add_entity(self)
 			animation_tree.set("parameters/climb/blend_amount", 1.0)
 			animation_tree.set("parameters/Walk/blend_amount", 0.0)
-			print("DESCEND")
+			#print("DESCEND")
 		State.DEAD:
 			animation_tree.set("parameters/climb/blend_amount", 0.0)
 			animation_tree.set("parameters/Walk/blend_amount", 1.0)
-			print("DEAD")
+			died = true
+			#print("DEAD")
 		State.EXIT:
-			print("EXIT")
+			#print("EXIT")
 			EntitiesManager.remove_entity(self)
 			current_state = new_state
 			await get_tree().create_timer(2).timeout
 			queue_free()
-			if gotTheBall:
+			if gotTheBall && !died:
 				GlobalManager.lost()
 	current_state = new_state
 
@@ -166,10 +169,18 @@ func _physics_process(delta):
 	global_position = Vector2(position3d.x, position3d.z - position3d.y)
 	pass
 
+func can_interact_short():
+	return !died
+
+func can_interact_long():
+	return !died
+
+func can_be_highlighted():
+	return !died
+
 func interact_short(entity):
 	changeState(State.DEAD)
 	$Bonk.play()
-
 
 func interact_long(entity):
 	changeState(State.IDLE)

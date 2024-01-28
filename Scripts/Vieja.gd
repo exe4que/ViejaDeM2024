@@ -33,6 +33,7 @@ func _process(delta):
 
 func _draw():
 	draw_circle(Vector2.ZERO, shortInteractionDistance, Color(1,0,0,0.3))
+	draw_circle(Vector2(0, -50), shortInteractionDistance, Color(1,0,0,0.3))
 	
 func _handle_mirror_sprite():
 	if moveVector.x > 0:
@@ -113,6 +114,9 @@ func interact_long(entity):
 
 func restore_dentadura():
 	hasDentadura = true
+
+func get_center_point():
+	return position3d + Vector3(0,50,0)
 	
 func stabBallSFX():
 	await get_tree().create_timer(0.2).timeout

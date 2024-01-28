@@ -56,12 +56,15 @@ func select_entity(entity: Entity):
 		selectedEntity.set_highlight(false)
 	selectedEntity = entity
 	selectedEntity.set_highlight(true)
-	print("selected: " + entity.name)
+	#print("selected: " + entity.name)
 
 func interact_short_distance():
 	if mainCharacter.can_interact_short():
 		if selectedEntity != null:
-			var distance = mainCharacter.position3d.distance_to(selectedEntity.position3d)
+			var origin = mainCharacter.position3d
+			if selectedEntity is Pendejo_State_Machine:
+				origin = mainCharacter.get_center_point()
+			var distance = origin.distance_to(selectedEntity.position3d)
 			if distance < mainCharacter.shortInteractionDistance:
 				if selectedEntity.can_interact_short():
 					selectedEntity.interact_short(mainCharacter)
