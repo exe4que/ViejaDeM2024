@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://dcr2qasis47p6"]
+
+[ext_resource type="Script" path="res://Scenes/TimeLeftBar.gd" id="1_568wa"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="ProgressBar" type="ProgressBar" parent="." node_paths=PackedStringArray("label")]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 65.0
+offset_top = 50.0
+offset_right = -72.0
+offset_bottom = 77.0
+grow_horizontal = 2
+value = 50.58
+script = ExtResource("1_568wa")
+label = NodePath("")
+
+[node name="Label" type="Label" parent="ProgressBar"]
+offset_left = 2.0
+offset_top = -24.0
+offset_right = 182.0
+offset_bottom = -1.0
+text = "PLAY TIME REMAINING:"
