@@ -58,6 +58,8 @@ func set_target(entity: Entity):
 	target = entity
 
 func _process(delta):
+	if !GlobalManager.running:
+		return
 	if !gotTheBall && current_state != State.DEAD && current_state != State.EXIT && ballTarget == null:
 		changeState(State.DEAD)
 	else: if current_state == State.IDLE:

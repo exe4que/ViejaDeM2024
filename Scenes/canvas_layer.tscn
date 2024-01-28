@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Scenes/PanelsController.gd" id="1_8ttvd"]
 [ext_resource type="Script" path="res://Scenes/TimeLeftBar.gd" id="1_568wa"]
-[ext_resource type="Texture2D" path="res://Textures/275436085.jpg" id="2_maysu"]
-[ext_resource type="Texture2D" path="res://Textures/unnamed.jpg" id="3_psm0i"]
+[ext_resource type="Texture2D" uid="uid://dxvg46q85kg7g" path="res://Textures/275436085.jpg" id="2_maysu"]
+[ext_resource type="Texture2D" uid="uid://d0nuk5tsgsjij" path="res://Textures/unnamed.jpg" id="3_psm0i"]
 
 [node name="CanvasLayer" type="CanvasLayer" node_paths=PackedStringArray("levelWonPanel", "levelLostPanel")]
 script = ExtResource("1_8ttvd")
