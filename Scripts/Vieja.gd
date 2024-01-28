@@ -18,7 +18,7 @@ func _ready():
 	hasDentadura = true
 	inputEnabled = true
 	EntitiesManager.add_main_character(self)
-	pass
+	GlobalManager.start()
 
 func _process(delta):
 	if inputEnabled:
