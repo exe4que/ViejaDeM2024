@@ -96,7 +96,7 @@ texture = ExtResource("12_btqn4")
 
 [node name="Vieja" parent="." instance=ExtResource("1_vp1px")]
 position = Vector2(771, 383)
-speed = 500.0
+speed = 90.0
 shortInteractionDistance = 70.0
 
 [node name="DebugScene" type="Node2D" parent="."]
