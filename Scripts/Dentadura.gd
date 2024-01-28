@@ -6,7 +6,7 @@ var target: Entity
 var initialized = false
 var state: DentaduraState;
 
-func _physics_process(delta):
+func _process(delta):
 	if !initialized:
 		return
 	if state == DentaduraState.FLYING:
@@ -15,6 +15,7 @@ func _physics_process(delta):
 		if(position3d.distance_to(targetPos) < 1):
 			target.die()
 			state = DentaduraState.FALLING_DOWN
+			$bite.play()
 	if state == DentaduraState.FALLING_DOWN:
 		position3d = position3d.move_toward(Vector3(position3d.x, 0, position3d.z), speed * delta)
 		if absf(position3d.y) < 1:
