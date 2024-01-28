@@ -11,6 +11,7 @@ var hasDentadura = true
 var animationTree: AnimationTree
 var move_blend = 0
 var inputEnabled = true
+var isWalking : bool = false
 
 func _ready():
 	animationTree = $AnimationTree_vieja
@@ -45,7 +46,6 @@ func _handle_animations(delta):
 		move_blend -= (1.0 / idleWalkBlendDuration) * delta;
 	move_blend = clamp(move_blend, 0, 1)
 	animationTree.set("parameters/Walk/blend_amount", move_blend)
-	
 
 func _physics_process(delta):
 	position3d += Vector3(moveVector.x, 0, moveVector.y) * delta * speed
@@ -100,7 +100,6 @@ func interact_short(entity):
 	await get_tree().create_timer(0.5).timeout
 	animationTree.set("parameters/attack_boy/request", 
 	AnimationNodeOneShot.ONE_SHOT_REQUEST_ABORT)
-
 func interact_long(entity):
 	if hasDentadura:
 		var newDentadura: Dentadura = dentaduraRes.instantiate()
