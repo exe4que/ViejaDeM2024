@@ -16,3 +16,7 @@ func _onLevelLost():
 	levelLostPanel.show()
 	get_tree().create_tween().tween_property(levelLostPanel, "color", Color.WHITE, 1)
 
+
+
+func _on_button_button_down():
+	get_tree().change_scene_to_file("res://Scenes/UI/main_menu.tscn")

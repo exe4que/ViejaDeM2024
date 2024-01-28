@@ -58,6 +58,15 @@ text = "\"Lo que a vos te hace felíz a mi me arruina las plantas\""
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Button" type="Button" parent="LevelLostPanel"]
+offset_left = 465.0
+offset_top = 499.0
+offset_right = 569.0
+offset_bottom = 530.0
+scale = Vector2(1.48662, 1.53778)
+text = "MAIN MENU
+"
+
 [node name="LevelWonPanel" type="CanvasModulate" parent="."]
 visible = false
 color = Color(1, 1, 1, 0)
@@ -86,3 +95,5 @@ text = "\"¿Para qué aspirar a la felicidad
 pudiendo aspirar a la miseria de otros?\""
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[connection signal="button_down" from="LevelLostPanel/Button" to="." method="_on_button_button_down"]
