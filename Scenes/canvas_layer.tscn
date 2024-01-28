@@ -1,8 +1,20 @@
 [gd_scene load_steps=5 format=3 uid="uid://dcr2qasis47p6"]
 
+<<<<<<< HEAD
+[ext_resource type="Script" path="res://Scenes/PanelsController.gd" id="1_8ttvd"]
+[ext_resource type="Script" path="res://Scenes/TimeLeftBar.gd" id="1_568wa"]
+[ext_resource type="Texture2D" uid="uid://dxvg46q85kg7g" path="res://Textures/275436085.jpg" id="2_maysu"]
+[ext_resource type="Texture2D" uid="uid://d0nuk5tsgsjij" path="res://Textures/unnamed.jpg" id="3_psm0i"]
+
+[node name="CanvasLayer" type="CanvasLayer" node_paths=PackedStringArray("levelWonPanel", "levelLostPanel")]
+script = ExtResource("1_8ttvd")
+levelWonPanel = NodePath("LevelWonPanel")
+levelLostPanel = NodePath("LevelLostPanel")
+=======
 [ext_resource type="Script" path="res://Scenes/TimeLeftBar.gd" id="1_568wa"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
+>>>>>>> parent of 4aa5ee7 (added sound VFXes)
 
 [node name="ProgressBar" type="ProgressBar" parent="." node_paths=PackedStringArray("label")]
 anchors_preset = 10
