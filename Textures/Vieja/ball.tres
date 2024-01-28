@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3 uid="uid://o3onb64mv382"]
+
+[ext_resource type="Texture2D" uid="uid://bp6gggoe3mksr" path="res://Textures/Boy/pibe_spritesheet.png" id="1_xtany"]
+
+[resource]
+atlas = ExtResource("1_xtany")
+region = Rect2(252.937, 515.935, 256.13, 256.813)

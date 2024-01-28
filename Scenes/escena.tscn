@@ -1,37 +1,56 @@
-[gd_scene load_steps=5 format=3 uid="uid://bnmcl3qrekm8k"]
+[gd_scene load_steps=7 format=3 uid="uid://bnmcl3qrekm8k"]
 
 [ext_resource type="Script" path="res://Scripts/DebugScene.gd" id="1_628yi"]
-[ext_resource type="Texture2D" uid="uid://d0ba7a0jc5gmv" path="res://Textures/hqdefault.jpg" id="1_oswln"]
+[ext_resource type="Texture2D" uid="uid://wog7rwn46wke" path="res://Textures/Environment/grass.png" id="1_u5buj"]
 [ext_resource type="PackedScene" uid="uid://caq41wdo3qewc" path="res://Scenes/vieja.tscn" id="1_vp1px"]
-[ext_resource type="PackedScene" uid="uid://b2foabe11hyef" path="res://Scenes/test_entity.tscn" id="4_51cpn"]
+[ext_resource type="PackedScene" uid="uid://cydsaglb1qu3" path="res://Scenes/spawner.tscn" id="4_77kjh"]
+[ext_resource type="Texture2D" uid="uid://btne8yxjfltkr" path="res://Textures/Environment/Fence.png" id="5_agcqf"]
+[ext_resource type="Texture2D" uid="uid://46s6p0ew4yq2" path="res://Textures/Environment/Fence_gate.png" id="6_s2ihq"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Hqdefault" type="Sprite2D" parent="."]
 z_index = -4096
-position = Vector2(574.5, 360.875)
-scale = Vector2(2.40069, 2.40069)
-texture = ExtResource("1_oswln")
+texture_repeat = 2
+position = Vector2(632, 347)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("1_u5buj")
+region_enabled = true
+region_rect = Rect2(0, 0, 30000, 30000)
 metadata/_edit_lock_ = true
 
 [node name="Vieja" parent="." instance=ExtResource("1_vp1px")]
 position = Vector2(782, 597)
 speed = 500.0
-shortInteractionDistance = 100.0
 
 [node name="DebugScene" type="Node2D" parent="."]
 script = ExtResource("1_628yi")
 debug = true
 metadata/_edit_lock_ = true
 
-[node name="TestEntity" parent="." instance=ExtResource("4_51cpn")]
-position = Vector2(404, 471)
+[node name="Spawner" parent="." instance=ExtResource("4_77kjh")]
 
-[node name="TestEntity2" parent="." instance=ExtResource("4_51cpn")]
-position = Vector2(595, 263)
+[node name="Fence" type="Sprite2D" parent="."]
+position = Vector2(34, 249)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_agcqf")
 
-[node name="TestEntity3" parent="." instance=ExtResource("4_51cpn")]
-position = Vector2(991, 311)
+[node name="Fence2" type="Sprite2D" parent="."]
+position = Vector2(340, 249)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_agcqf")
 
-[node name="TestEntity4" parent="." instance=ExtResource("4_51cpn")]
-position = Vector2(975, 202)
+[node name="Fence3" type="Sprite2D" parent="."]
+position = Vector2(647, 249)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_agcqf")
+
+[node name="Fence4" type="Sprite2D" parent="."]
+position = Vector2(1255, 248)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_agcqf")
+
+[node name="FenceGate" type="Sprite2D" parent="."]
+position = Vector2(951, 248)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_s2ihq")

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ok3su5c1y507"]
+
+[ext_resource type="Script" path="res://Scripts/Ball.gd" id="1_8dm86"]
+[ext_resource type="Texture2D" uid="uid://o3onb64mv382" path="res://Textures/Vieja/ball.tres" id="1_embyr"]
+
+[node name="Ball" type="Node2D" node_paths=PackedStringArray("sprites")]
+script = ExtResource("1_8dm86")
+materialPath = "res://Materials/ballMaterial.tres"
+sprites = [NodePath("Sprite2D")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_embyr")
