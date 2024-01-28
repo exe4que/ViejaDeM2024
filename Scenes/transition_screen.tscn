@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bhrftii58cjr3"]
 
 [ext_resource type="Script" path="res://TransitionScreen.gd" id="1_cm3tw"]
-[ext_resource type="Texture2D" uid="uid://wog7rwn46wke" path="res://Textures/Environment/grass.png" id="2_seg1q"]
+[ext_resource type="Texture2D" uid="uid://cwyflmx8qfg52" path="res://Textures/UI/angryCinematic.png" id="2_6p56s"]
 
 [sub_resource type="Animation" id="Animation_7180f"]
 length = 0.001
@@ -58,10 +58,10 @@ _data = {
 [node name="TransitionScreen" type="CanvasLayer"]
 script = ExtResource("1_cm3tw")
 
-[node name="Grass" type="Sprite2D" parent="."]
-position = Vector2(577, 325)
-scale = Vector2(1.12109, 0.628906)
-texture = ExtResource("2_seg1q")
+[node name="AngryCinematic" type="Sprite2D" parent="."]
+position = Vector2(575.5, 324)
+scale = Vector2(0.599479, 0.598148)
+texture = ExtResource("2_6p56s")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
