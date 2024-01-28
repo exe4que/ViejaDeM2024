@@ -36,7 +36,8 @@ func get_closest_entity_in_direction(direction: Vector2):
 	return closestEntity
 
 func _process(delta):
-	_process_mouse_position()
+	if mainCharacter != null:
+		_process_mouse_position()
 	
 
 func _process_mouse_position():
