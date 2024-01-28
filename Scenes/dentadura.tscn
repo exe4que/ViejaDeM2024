@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cxxlwk301e0sp"]
+[gd_scene load_steps=4 format=3 uid="uid://cxxlwk301e0sp"]
 
 [ext_resource type="Script" path="res://Scripts/Dentadura.gd" id="1_nu8t7"]
 [ext_resource type="Texture2D" uid="uid://cigcgtts3x5aq" path="res://Textures/Vieja/dentadura.tres" id="2_w31ts"]
+[ext_resource type="AudioStream" uid="uid://bgb0fwkube70j" path="res://Audio/cartoon_bite_sound_effect.mp3" id="3_s3uxa"]
 
 [node name="Dentadura" type="Node2D" node_paths=PackedStringArray("sprites")]
 script = ExtResource("1_nu8t7")
@@ -12,3 +13,7 @@ sprites = [NodePath("Sprite2D")]
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_w31ts")
+
+[node name="bite" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_s3uxa")
+volume_db = 4.576
