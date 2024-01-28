@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://bnmcl3qrekm8k"]
+[gd_scene load_steps=13 format=3 uid="uid://bnmcl3qrekm8k"]
 
 [ext_resource type="Script" path="res://Scripts/DebugScene.gd" id="1_628yi"]
-[ext_resource type="Texture2D" uid="uid://wog7rwn46wke" path="res://Textures/Environment/grass.png" id="1_u5buj"]
+[ext_resource type="Texture2D" path="res://Textures/Environment/grass.png" id="1_u5buj"]
 [ext_resource type="PackedScene" uid="uid://caq41wdo3qewc" path="res://Scenes/vieja.tscn" id="1_vp1px"]
+[ext_resource type="Texture2D" uid="uid://clh6yd21eck1v" path="res://Textures/Environment/vereda.png" id="2_2n4fh"]
 [ext_resource type="PackedScene" uid="uid://cydsaglb1qu3" path="res://Scenes/spawner.tscn" id="4_77kjh"]
 [ext_resource type="Texture2D" uid="uid://btne8yxjfltkr" path="res://Textures/Environment/Fence.png" id="5_agcqf"]
 [ext_resource type="Texture2D" uid="uid://46s6p0ew4yq2" path="res://Textures/Environment/Fence_gate.png" id="6_s2ihq"]
@@ -10,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dcr2qasis47p6" path="res://Scenes/canvas_layer.tscn" id="8_4baee"]
 [ext_resource type="AudioStream" uid="uid://cfy1ojc5i0f6c" path="res://Audio/knife.mp3" id="8_kqu12"]
 [ext_resource type="AudioStream" uid="uid://dxd65jjvlu76" path="res://Audio/stabBall.mp3" id="9_n3qgp"]
+[ext_resource type="Texture2D" uid="uid://cdp2qk63i7u0s" path="res://Textures/Environment/calle.png" id="12_btqn4"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -17,11 +19,80 @@
 z_index = -4096
 texture_repeat = 2
 position = Vector2(632, 347)
-scale = Vector2(0.05, 0.05)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("1_u5buj")
 region_enabled = true
 region_rect = Rect2(0, 0, 30000, 30000)
 metadata/_edit_lock_ = true
+
+[node name="Vereda" type="Sprite2D" parent="Hqdefault"]
+position = Vector2(-2928.5, -81)
+texture = ExtResource("2_2n4fh")
+
+[node name="Vereda2" type="Sprite2D" parent="Hqdefault"]
+position = Vector2(-1908.5, -77)
+texture = ExtResource("2_2n4fh")
+
+[node name="Vereda3" type="Sprite2D" parent="Hqdefault"]
+position = Vector2(-892.5, -81)
+texture = ExtResource("2_2n4fh")
+
+[node name="Vereda4" type="Sprite2D" parent="Hqdefault"]
+position = Vector2(131.5, -77)
+texture = ExtResource("2_2n4fh")
+
+[node name="Vereda5" type="Sprite2D" parent="Hqdefault"]
+position = Vector2(1155.5, -73)
+texture = ExtResource("2_2n4fh")
+
+[node name="Vereda6" type="Sprite2D" parent="Hqdefault"]
+position = Vector2(2055.5, -73)
+texture = ExtResource("2_2n4fh")
+
+[node name="Vereda7" type="Sprite2D" parent="Hqdefault"]
+position = Vector2(2955, -76)
+texture = ExtResource("2_2n4fh")
+
+[node name="Vereda8" type="Sprite2D" parent="Hqdefault"]
+position = Vector2(3971, -76)
+texture = ExtResource("2_2n4fh")
+
+[node name="Vereda9" type="Sprite2D" parent="Hqdefault"]
+position = Vector2(-3948.5, -81)
+texture = ExtResource("2_2n4fh")
+
+[node name="Calle" type="Sprite2D" parent="Hqdefault"]
+position = Vector2(2919, -860)
+texture = ExtResource("12_btqn4")
+
+[node name="Calle2" type="Sprite2D" parent="Hqdefault"]
+position = Vector2(1919, -864)
+texture = ExtResource("12_btqn4")
+
+[node name="Calle3" type="Sprite2D" parent="Hqdefault"]
+position = Vector2(911, -860)
+texture = ExtResource("12_btqn4")
+
+[node name="Calle4" type="Sprite2D" parent="Hqdefault"]
+position = Vector2(-113, -856)
+texture = ExtResource("12_btqn4")
+
+[node name="Calle5" type="Sprite2D" parent="Hqdefault"]
+position = Vector2(-1081, -856)
+texture = ExtResource("12_btqn4")
+
+[node name="Calle6" type="Sprite2D" parent="Hqdefault"]
+position = Vector2(-2041, -852)
+texture = ExtResource("12_btqn4")
+
+[node name="Calle7" type="Sprite2D" parent="Hqdefault"]
+position = Vector2(-3049, -852)
+texture = ExtResource("12_btqn4")
+
+[node name="Calle8" type="Sprite2D" parent="Hqdefault"]
+position = Vector2(-17, -1860)
+scale = Vector2(8.04, 1)
+texture = ExtResource("12_btqn4")
 
 [node name="Vieja" parent="." instance=ExtResource("1_vp1px")]
 position = Vector2(771, 383)
@@ -38,6 +109,12 @@ metadata/_edit_lock_ = true
 [node name="Fence" type="Sprite2D" parent="."]
 z_index = -100
 position = Vector2(34, 249)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_agcqf")
+
+[node name="Fence5" type="Sprite2D" parent="."]
+z_index = -100
+position = Vector2(34, 251)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("5_agcqf")
 
@@ -63,6 +140,51 @@ texture = ExtResource("5_agcqf")
 z_index = -100
 position = Vector2(951, 248)
 scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_s2ihq")
+
+[node name="Fence6" type="Sprite2D" parent="."]
+modulate = Color(0.164706, 0, 0.678431, 0.121569)
+z_index = -100
+position = Vector2(-23.9095, 449.7)
+rotation = -6.28319
+scale = Vector2(0.3, 0.3)
+skew = 0.802851
+texture = ExtResource("5_agcqf")
+
+[node name="Fence7" type="Sprite2D" parent="."]
+modulate = Color(0.164706, 0, 0.678431, 0.121569)
+z_index = -100
+position = Vector2(282.091, 447.7)
+rotation = -6.28319
+scale = Vector2(0.3, 0.3)
+skew = 0.802851
+texture = ExtResource("5_agcqf")
+
+[node name="Fence8" type="Sprite2D" parent="."]
+modulate = Color(0.164706, 0, 0.678431, 0.121569)
+z_index = -100
+position = Vector2(589.091, 447.7)
+rotation = -6.28319
+scale = Vector2(0.3, 0.3)
+skew = 0.802851
+texture = ExtResource("5_agcqf")
+
+[node name="Fence9" type="Sprite2D" parent="."]
+modulate = Color(0.164706, 0, 0.678431, 0.121569)
+z_index = -100
+position = Vector2(1197.09, 446.7)
+rotation = -6.28319
+scale = Vector2(0.3, 0.3)
+skew = 0.802851
+texture = ExtResource("5_agcqf")
+
+[node name="FenceGate2" type="Sprite2D" parent="."]
+modulate = Color(0.164706, 0, 0.678431, 0.121569)
+z_index = -100
+position = Vector2(893.091, 446.7)
+rotation = -6.28319
+scale = Vector2(0.3, 0.3)
+skew = 0.802851
 texture = ExtResource("6_s2ihq")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
