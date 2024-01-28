@@ -33,5 +33,11 @@ func interact_short(entity):
 	await get_tree().create_timer(1).timeout
 	queue_free()
 
+func die():
+	#gets collected
+	EntitiesManager.remove_entity(self)
+	await get_tree().create_timer(0.2).timeout
+	queue_free()
+
 func can_interact_long():
 	return false

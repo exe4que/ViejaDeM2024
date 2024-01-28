@@ -11,6 +11,7 @@ func add_main_character(entity: Entity):
 func add_entity(entity):
 	entities.append(entity)
 	print("added: " + entity.name)
+	print("entities count: " + str(entities.size()))
 
 func remove_entity(entity):
 	entitiesToRemove.append(entity)

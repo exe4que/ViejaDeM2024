@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://semupyr04qj1"]
+
+[ext_resource type="Shader" path="res://Shaders/outline.gdshader" id="1_u2sjo"]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource("1_u2sjo")
+shader_parameter/line_color = Color(1, 0.721569, 0.0705882, 1)
+shader_parameter/line_thickness = 0.0

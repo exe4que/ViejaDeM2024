@@ -1370,8 +1370,10 @@ nodes/walk/node = SubResource("AnimationNodeBlend2_8cqi5")
 nodes/walk/position = Vector2(1020, 40)
 node_connections = [&"climb", 0, &"Animation", &"climb", 1, &"Animation 3", &"output", 0, &"walk", &"walk", 0, &"climb", &"walk", 1, &"Animation 2"]
 
-[node name="Pibe" type="CharacterBody2D"]
+[node name="Pibe" type="CharacterBody2D" node_paths=PackedStringArray("sprites")]
 script = ExtResource("1_2ww1l")
+materialPath = "res://Materials/pibeMaterial.tres"
+sprites = [NodePath("Node2D/PFootR"), NodePath("Node2D/PFootL"), NodePath("Node2D/PBottom"), NodePath("Node2D/PBottom/PTop"), NodePath("Node2D/PBottom/PTop/PHead"), NodePath("Node2D/PBottom/PTop/PHandL"), NodePath("Node2D/PBottom/PTop/PHandR")]
 
 [node name="Node2D" type="Node2D" parent="."]
 scale = Vector2(0.5, 0.5)

@@ -20,7 +20,7 @@ region_rect = Rect2(0, 0, 30000, 30000)
 metadata/_edit_lock_ = true
 
 [node name="Vieja" parent="." instance=ExtResource("1_vp1px")]
-position = Vector2(782, 597)
+position = Vector2(771, 383)
 speed = 500.0
 shortInteractionDistance = 50.0
 
@@ -32,26 +32,31 @@ metadata/_edit_lock_ = true
 [node name="Spawner" parent="." instance=ExtResource("4_77kjh")]
 
 [node name="Fence" type="Sprite2D" parent="."]
+z_index = -100
 position = Vector2(34, 249)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("5_agcqf")
 
 [node name="Fence2" type="Sprite2D" parent="."]
+z_index = -100
 position = Vector2(340, 249)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("5_agcqf")
 
 [node name="Fence3" type="Sprite2D" parent="."]
+z_index = -100
 position = Vector2(647, 249)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("5_agcqf")
 
 [node name="Fence4" type="Sprite2D" parent="."]
+z_index = -100
 position = Vector2(1255, 248)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("5_agcqf")
 
 [node name="FenceGate" type="Sprite2D" parent="."]
+z_index = -100
 position = Vector2(951, 248)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("6_s2ihq")

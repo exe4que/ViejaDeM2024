@@ -21,9 +21,9 @@ func _ready():
 		add_child(newBall)
 		newBall.initialize(newPos)
 		
-		#var newBoy = boyRes.instantiate()
-		#add_child(newBoy)
-		#newBoy.initialize(newBall)
+		var newBoy = boyRes.instantiate()
+		add_child(newBoy)
+		newBoy.initialize(newBall)
 		
 		await get_tree().create_timer(currentSpawnFrecuency).timeout
 
