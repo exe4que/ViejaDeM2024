@@ -4,6 +4,7 @@ extends Entity
 @export var speed: float = 5
 @export var shortInteractionDistance: float = 5
 @export var idleWalkBlendDuration: float = 0.3
+@export var debug: bool
 
 var moveVector: Vector2 = Vector2(0, 0)
 var dentaduraRes = preload("res://Scenes/dentadura.tscn")
@@ -32,8 +33,9 @@ func _process(delta):
 	queue_redraw()
 
 func _draw():
-	draw_circle(Vector2.ZERO, shortInteractionDistance, Color(1,0,0,0.3))
-	draw_circle(Vector2(0, -50), shortInteractionDistance, Color(1,0,0,0.3))
+	if debug:
+		draw_circle(Vector2.ZERO, shortInteractionDistance, Color(1,0,0,0.3))
+		draw_circle(Vector2(0, -50), shortInteractionDistance, Color(1,0,0,0.3))
 	
 func _handle_mirror_sprite():
 	if moveVector.x > 0:
