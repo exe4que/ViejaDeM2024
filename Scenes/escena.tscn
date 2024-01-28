@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bnmcl3qrekm8k"]
+[gd_scene load_steps=17 format=3 uid="uid://bnmcl3qrekm8k"]
 
 [ext_resource type="Script" path="res://Scripts/DebugScene.gd" id="1_628yi"]
 [ext_resource type="Texture2D" uid="uid://wog7rwn46wke" path="res://Textures/Environment/grass.png" id="1_u5buj"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://cdp2qk63i7u0s" path="res://Textures/Environment/calle.png" id="12_btqn4"]
 [ext_resource type="AudioStream" uid="uid://b50x8n16orjwh" path="res://Audio/AlejensceDeMiCesped.mp3" id="12_g6npf"]
 [ext_resource type="AudioStream" uid="uid://o3ctwgj70vu5" path="res://Audio/PelotaDeMierda.mp3" id="13_6x1ic"]
+[ext_resource type="Texture2D" uid="uid://by20yvrie5ryk" path="res://Textures/Environment/tullip.png" id="15_g61j5"]
+[ext_resource type="Texture2D" uid="uid://cywoysv81rkt2" path="res://Textures/Environment/roses.png" id="16_7ukyv"]
 
 [node name="Node2D2" type="Node2D"]
 
@@ -213,3 +215,86 @@ volume_db = 9.142
 pitch_scale = 1.13
 
 [node name="CanvasLayer" parent="." instance=ExtResource("8_4baee")]
+
+[node name="Tullip" type="Sprite2D" parent="."]
+z_index = -500
+position = Vector2(717, 581)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("15_g61j5")
+
+[node name="Tullip2" type="Sprite2D" parent="."]
+z_index = -500
+position = Vector2(954, 472)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("15_g61j5")
+
+[node name="Tullip3" type="Sprite2D" parent="."]
+z_index = -500
+position = Vector2(375, 478)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("15_g61j5")
+
+[node name="Tullip4" type="Sprite2D" parent="."]
+z_index = -500
+position = Vector2(142, 600)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("15_g61j5")
+
+[node name="Tullip5" type="Sprite2D" parent="."]
+z_index = -500
+position = Vector2(74, 465)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("15_g61j5")
+flip_h = true
+
+[node name="Tullip6" type="Sprite2D" parent="."]
+z_index = -500
+position = Vector2(49, 498)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("15_g61j5")
+
+[node name="Tullip7" type="Sprite2D" parent="."]
+z_index = -500
+position = Vector2(76, 515)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("15_g61j5")
+
+[node name="Tullip8" type="Sprite2D" parent="."]
+z_index = -500
+position = Vector2(755, 595)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("15_g61j5")
+flip_h = true
+
+[node name="Roses" type="Sprite2D" parent="."]
+z_index = -500
+position = Vector2(19, 640)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("16_7ukyv")
+
+[node name="Roses2" type="Sprite2D" parent="."]
+z_index = -500
+position = Vector2(68, 661)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("16_7ukyv")
+
+[node name="Roses4" type="Sprite2D" parent="."]
+z_index = -500
+position = Vector2(1170, 503)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("16_7ukyv")
+flip_h = true
+
+[node name="Roses6" type="Sprite2D" parent="."]
+z_index = -500
+position = Vector2(666, 655)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("16_7ukyv")
+flip_h = true
+
+[node name="Roses8" type="Sprite2D" parent="."]
+z_index = -500
+position = Vector2(357, 655)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("16_7ukyv")
+flip_h = true
