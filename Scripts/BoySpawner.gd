@@ -10,7 +10,7 @@ var boyRes = preload("res://Scenes/pibe.tscn")
 func _ready():
 	currentSpawnFrecuency = spawnFrecuencyStart
 
-	while GlobalManager.running:
+	while true:
 		var hLimits = GlobalManager.horizontallLimits
 		var vLimits = GlobalManager.verticalLimits
 		var randX = randf_range(hLimits.x + 50, hLimits.y - 50)
@@ -38,6 +38,5 @@ func ballSound():
 	await get_tree().create_timer(0.3).timeout
 	$BallAudio.play()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-
 func _process(delta):
-	currentSpawnFrecuency = lerpf(spawnFrecuencyStart, spawnFrecuencyEnd, GlobalManager.progress)
+	pass
