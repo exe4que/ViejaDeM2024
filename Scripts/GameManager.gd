@@ -28,10 +28,12 @@ func _process(delta):
 
 func won():
 	running = false
+	EntitiesManager.reset()
 	level_won.emit()
 	pass
 
 func lost():
 	running = false
+	EntitiesManager.reset()
 	level_lost.emit()
 	pass
