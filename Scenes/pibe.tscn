@@ -1820,6 +1820,7 @@ node_connections = [&"climb", 0, &"Animation", &"climb", 1, &"Animation 3", &"ou
 
 [node name="Pibe" type="CharacterBody2D" node_paths=PackedStringArray("sprites")]
 script = ExtResource("1_2ww1l")
+speed = 120.0
 materialPath = "res://Materials/pibeMaterial.tres"
 sprites = [NodePath("Node2D/PFootR"), NodePath("Node2D/PFootL"), NodePath("Node2D/PBottom"), NodePath("Node2D/PBottom/PTop"), NodePath("Node2D/PBottom/PTop/PHead"), NodePath("Node2D/PBottom/PTop/PHandL"), NodePath("Node2D/PBottom/PTop/PHandR")]
 
